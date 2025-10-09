@@ -10,7 +10,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Bethel Panashe Choto</title>
-  <meta name="description" content="">
+  <meta name="description"
+    content="Land Diary – Farm Activity Record‑Keeping Web App built with React and a Node.js backend on AWS (S3, DynamoDB, Cognito, CloudWatch).">
   <meta name="keywords" content="">
 
   <!-- Favicons -->
@@ -99,12 +100,21 @@
           <div class="swiper-wrapper align-items-center">
 
             <div class="swiper-slide">
-              <img src="assets/img/portfolio/websites/landdiary-web/image.png" alt="">
+              <img src="assets/img/portfolio/landdiary-app/dashboard.png" alt="">
             </div>
 
             <div class="swiper-slide">
-              <img src="assets/img/portfolio/websites/landdiary-web/website-img.PNG" alt="">
+              <img src="assets/img/portfolio/landdiary-app/dashboard-1.png" alt="">
             </div>
+
+            <div class="swiper-slide">
+              <img src="assets/img/portfolio/landdiary-app/dashboard-img.png" alt="">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/img/portfolio/landdiary-app/blocks.PNG" alt="">
+            </div>
+
           </div>
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
@@ -122,6 +132,19 @@
                 works on any smart device and is fully usable offline in the field; when a connection becomes available,
                 data automatically syncs to the cloud for safe storage and team access. Data is captured using a
                 universal digital language to ensure consistency and seamless integration.
+              </p>
+
+              <p>
+                <b>Architecture</b>
+              <ul>
+                <li>Created with a <b>Node.js</b> backend exposing REST APIs.</li>
+                <li>Backend and assets deployed on <b>AWS</b>, leveraging S3 buckets for hosting and file storage.</li>
+                <li>Application data stored in <b>Amazon DynamoDB</b> for scalable, low‑latency access.</li>
+                <li>User authentication and authorization handled by <b>Amazon Cognito</b> (sign‑up/sign‑in, access
+                  control).</li>
+                <li>Operational logging, testing, and debugging via <b>Amazon CloudWatch</b> logs and metrics.</li>
+                <li>Frontend built with <b>React.js</b> for a responsive, offline‑first experience.</li>
+              </ul>
               </p>
 
               <p>
@@ -176,17 +199,20 @@
               <p>
                 <b>Technology Stack</b>
               <ul>
-                <li><b>Frontend</b>: HTML, CSS, JavaScript</li>
-                <li><b>Backend</b>: Node.js</li>
-                <li><b>Database</b>: AWS DynamoDB</li>
-                <li><b>Infrastructure</b>: Nginx/Apache with HTTPS</li>
+                <li><b>Frontend</b>: React.js single‑page application</li>
+                <li><b>Backend</b>: Node.js REST APIs deployed on AWS</li>
+                <li><b>Storage</b>: Amazon S3 for files/exports and static assets</li>
+                <li><b>Database</b>: Amazon DynamoDB for application data</li>
+                <li><b>Authentication</b>: Amazon Cognito for user sign‑up, sign‑in, and access control</li>
+                <li><b>Observability</b>: Amazon CloudWatch for logs, metrics, and debugging</li>
               </ul>
               </p>
 
               <p>
                 <b>Deployment</b>
               <ul>
-                <li>Deployed on <b>Google Cloud</b> with automated CI/CD and secure backups.</li>
+                <li>Deployed on <b>AWS</b>: frontend hosted on S3 (with CDN), backend on managed AWS services; CI/CD
+                  with automated builds, environment separation, and secure backups.</li>
               </ul>
               </p>
 
@@ -210,9 +236,10 @@
                 <li><strong>Category</strong> Web app / AgTech SaaS</li>
                 <li><strong>Client</strong> Land Diary</li>
                 <li><strong>Project date</strong> 2025</li>
-                <li><strong>Project URL</strong> <a href="#">https://landdiary.co.za/</a></li>
-                <li><strong>Deployment</strong> Google Cloud</li>
-                <li><a href="https://landdiary.co.za/" class="btn-visit align-self-start">Visit Website</a></li>
+                <li><strong>Project URL</strong> <a href="https://app.landdiary.co.za/">https://app.landdiary.co.za/</a>
+                </li>
+                <li><strong>Deployment</strong> AWS Cloud (S3, DynamoDB, Cognito, CloudWatch)</li>
+                <li><a href="https://app.landdiary.co.za/" class="btn-visit align-self-start">Visit Website</a></li>
               </ul>
             </div>
           </div>

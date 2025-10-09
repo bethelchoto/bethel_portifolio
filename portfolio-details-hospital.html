@@ -94,30 +94,11 @@
           <div class="swiper-wrapper align-items-center">
 
             <div class="swiper-slide">
-              <img src="assets/img/portfolio/eighty-nine/eighty-nine-home.png" alt="">
+              <img src="assets/img/portfolio/hospital/website.png" alt="">
             </div>
 
             <div class="swiper-slide">
-              <img src="assets/img/portfolio/eighty-nine/how-it-work.png" alt="">
-            </div>
-
-            <div class="swiper-slide">
-              <img src="assets/img/portfolio/eighty-nine/join-waitlist.png" alt="">
-            </div>
-
-            <div class="swiper-slide">
-              <img src="assets/img/portfolio/eighty-nine/mission.png" alt="">
-            </div>
-
-            <div class="swiper-slide">
-              <img src="assets/img/portfolio/eighty-nine/our-impact.png" alt="">
-            </div>
-
-            <div class="swiper-slide">
-              <video controls autoplay muted loop style="width: 100%; height: auto;">
-                <source src="assets/img/portfolio/eighty-nine/project-demo.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
+              <img src="assets/img/portfolio/hospital/website.png" alt="">
             </div>
 
           </div>
@@ -130,34 +111,34 @@
 
           <div class="col-lg-8" data-aos="fade-up">
             <div class="portfolio-description">
-              <h2>Eighty-nine Main Website</h2>
+              <h2>Hospital Website</h2>
               <b>Overview</b>
               <p>
-                Night Eight is a health company based in Arizona, USA, dedicated to providing comprehensive health and
-                wellness services. The company's website serves as a central hub for users to learn about the services
-                offered, access valuable health-related content, and interact with the business through key features
-                such as a waitlist system and blog.
+                Hospital is a modern healthcare provider focused on delivering compassionate, high-quality
+                medical services. The hospital website acts as a central hub where patients and visitors can explore
+                departments, find specialists, book appointments, and access helpful health resources.
               </p>
 
               <p>
                 <b>Key Features</b>
               <ul>
-                <li><b>Company Information & Service Display </b>
-                  A well-structured website providing general information about the company, including its mission,
-                  values, and services.
-                  Detailed descriptions of the various health services available to users.
-                  Clear navigation and user-friendly interface ensuring an informative experience for site visitors.
+                <li><b>Hospital Information & Services</b>
+                  Clear presentation of the hospital's mission, values, departments, and available clinical services.
+                  Detailed pages for key service lines (e.g., Outpatient, Emergency, Maternity, Pediatrics, Surgery).
+                  Intuitive navigation designed to help patients find information quickly.
                 </li>
-                <li> <b>Waitlist Functionality </b>
-                  Integrated Firebase database for real-time waitlist management.
-                  Users can easily add themselves to the waitlist, with instant updates stored in the cloud for quick
-                  access.
-                  Seamless registration and management system ensuring smooth user interaction.
+                <li><b>Appointment Booking</b>
+                  Streamlined request and scheduling flow for patient appointments.
+                  Real-time updates ensure accurate availability and prompt confirmations.
                 </li>
-                <li><b>Health Blog</b>
-                  A dedicated blog section displaying informative and relevant health-related articles.
-                  Content is dynamically updated to keep users informed about the latest health trends, tips, and
-                  company news.</li>
+                <li><b>Doctors & Departments Directory</b>
+                  Searchable profiles for specialists with qualifications, areas of expertise, and clinic hours.
+                  Department pages highlighting treatments, diagnostic services, and contact details.
+                </li>
+                <li><b>Health Blog & Patient Education</b>
+                  Regular articles and advisories on health tips, preventive care, and hospital news.
+                  Content updates keep patients informed and engaged with relevant topics.
+                </li>
               </ul>
               </p>
 
@@ -165,24 +146,20 @@
               <p>
                 <b>Technology Stack</b>
               <ul>
-                <li><b>Frontend -> React.js </b>
-                  Leveraged React.js to build a dynamic and responsive user interface with smooth, fast interactions.
-                  Component-based architecture, ensuring code reusability and maintainability.</li>
-                <li> <b>Waitlist Functionality -> </b>
-                  Integrated Firebase database for real-time waitlist management.
-                  Users can easily add themselves to the waitlist, with instant updates stored in the cloud for quick
-                  access.
-                  Seamless registration and management system ensuring smooth user interaction.
+                <li><b>Frontend -> React.js</b>
+                  Built a responsive, accessible UI to ensure a smooth experience across devices.
+                  Component-based architecture supports reuse, maintainability, and fast interactions.</li>
+                <li><b>Patient Services & Directory -> Firebase</b>
+                  Firestore powers real-time updates for appointments, departments, and doctor profiles.
+                  Security rules and authentication protect sensitive patient interactions.
                 </li>
-                <li><b> Backend-> Firebase </b>
-                  Used Firebase for real-time data storage and synchronization, specifically for managing the waitlist
-                  functionality.
-                  Firebase Authentication and Firestore were implemented for secure and scalable data management.
+                <li><b>Backend -> Firebase</b>
+                  Real-time data storage and synchronization for appointments and content.
+                  Firebase Authentication and Firestore enable secure, scalable operations.
                 </li>
 
-                <li><b> Deployment -> </b>
-                  The website is deployed on [Your Hosting Service], ensuring high availability and fast loading times
-                  for users.
+                <li><b>Deployment -> Vercel</b>
+                  Deployed on Vercel for reliability, performance, and global edge delivery.
                 </li>
 
               </ul>
@@ -191,13 +168,13 @@
               <p>
                 <b>Challenges & Solutions</b>
               <ul>
-                <li><b>Scalability of the Waitlist System -> </b>
-                  One of the primary challenges was ensuring that the waitlist could scale easily as the user base grew.
-                  Firebase was chosen due to its seamless scalability, handling real-time data updates effortlessly.
+                <li><b>Patient Data Privacy & Security</b>
+                  Implemented robust authentication and granular Firestore security rules to safeguard data.
+                  Followed best practices for least-privilege access and secure data flows.
                 </li>
-                <li> <b>Responsive Design -> </b>
-                  Ensuring a responsive and mobile-friendly design was crucial. React’s flexibility allowed us to create
-                  a smooth experience across different screen sizes and devices.
+                <li><b>Accessible, Mobile-First Design</b>
+                  Ensured WCAG-aligned contrast, keyboard navigation, and semantic structure.
+                  Responsive layouts provide a consistent experience on phones, tablets, and desktops.
                 </li>
               </ul>
               </p>
@@ -206,14 +183,14 @@
                 <b>Future Enhancements</b>
               <ul>
                 <li>
-                  Integration with appointment booking systems for a more seamless user experience.
+                  Patient portal for test results, prescriptions, and visit history.
                 </li>
                 <li>
-                  User feedback system for continuous improvement of health services.
+                  Telemedicine integration for virtual consultations and follow-ups.
                 </li>
 
                 <li>
-                  Enhanced blog features with search functionality and categorized topics.
+                  Advanced search and filters for doctors, specialties, and availability.
                 </li>
               </ul>
               </p>
@@ -221,20 +198,9 @@
             </div>
           </div>
 
-          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
-            <div class="portfolio-info">
-              <h3>Project information</h3>
-              <ul>
-                <li><strong>Category</strong> Web design</li>
-                <li><strong>Client</strong> Eighty-Nine</li>
-                <li><strong>Project date</strong> 2024</li>
-                <li><strong>Project URL</strong> <a href="#">https://eighty-nine.vercel.app/</a></li>
-                <li><a href="https://eighty-nine.vercel.app/" class="btn-visit align-self-start">Visit Website</a></li>
-              </ul>
-            </div>
-          </div>
-
         </div>
+
+      </div>
 
       </div>
 
