@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Bethel Panashe Choto</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1 class="sitename">Bethel Panashe Choto</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home<br></a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">Portfolio Details</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Portfolio Details</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <!-- End Page Title -->
+
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+
+      <div class="container" data-aos="fade-up">
+
+        <div class="portfolio-details-slider swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "navigation": {
+                "nextEl": ".swiper-button-next",
+                "prevEl": ".swiper-button-prev"
+              },
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
+          <div class="swiper-wrapper align-items-center">
+
+            <div class="swiper-slide">
+              <img src="assets/img/portfolio/ecommerce/1.png" alt="">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/img/portfolio/ecommerce/2.png" alt="">
+            </div>
+
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="row justify-content-between gy-4 mt-4">
+
+          <div class="col-lg-8" data-aos="fade-up">
+            <div class="portfolio-description">
+              <h2>E‑commerce Web Application</h2>
+              <b>Overview</b>
+              <p>
+                Full‑stack e‑commerce platform built with PHP, HTML, and MySQL. The application enables customers to
+                browse products, manage a shopping cart, securely check out, and track orders, while administrators
+                manage inventory, categories, orders, and users from a dedicated dashboard. The UI is responsive and
+                optimized for performance and accessibility.
+              </p>
+
+              <p>
+                <b>Key Features</b>
+              <ul>
+                <li><b>Product Catalog</b>
+                  Category filtering, keyword search, and pagination. Individual product pages with images, pricing,
+                  stock status, and related products.
+                </li>
+                <li><b>Shopping Cart & Checkout</b>
+                  Session‑based cart with add/update/remove actions, shipping calculations, and order confirmation.
+                  Checkout captures customer details and persists orders with line items.
+                </li>
+                <li><b>User Accounts</b>
+                  Registration/login, profile management, and order history powered by secure password hashing.
+                </li>
+                <li><b>Admin Dashboard</b>
+                  CRUD for products and categories, inventory management, order status updates, and basic reporting.
+                </li>
+                <li><b>Payments (Integration‑ready)</b>
+                  Structured to plug in gateways such as PayPal or Stripe; current build supports test/sandbox flows.
+                </li>
+                <li><b>Security & SEO</b>
+                  Input validation, prepared statements, CSRF protection on forms, and semantic markup for better SEO.
+                </li>
+              </ul>
+              </p>
+
+
+              <p>
+                <b>Technology Stack</b>
+              <ul>
+                <li><b>Frontend -> HTML5, CSS3, Bootstrap 5, Vanilla JS</b>
+                  Responsive layouts, reusable UI components, and graceful progressive enhancement.
+                </li>
+                <li><b>Backend -> PHP (PDO)</b>
+                  Clean PHP controllers and services, parameterized queries with PDO, and session‑based auth.
+                </li>
+                <li><b>Database -> MySQL</b>
+                  Normalized schema for products, categories, users, orders, and order_items with proper indexing.
+                </li>
+                <li><b>Email & Notifications -> PHPMailer</b>
+                  Order confirmations and admin alerts.
+                </li>
+                <li><b>Deployment -> Apache/Nginx (cPanel/XAMPP)</b>
+                  Configured for friendly URLs and environment‑based settings.
+                </li>
+              </ul>
+              </p>
+
+              <p>
+                <b>Challenges & Solutions</b>
+              <ul>
+                <li><b>Data Integrity & Security</b>
+                  Mitigated SQL injection with prepared statements, enforced server‑side validation, and secured
+                  sessions.
+                </li>
+                <li><b>Asset & Image Management</b>
+                  Implemented safe file uploads, image resizing, and organized storage under <code>/uploads</code>.
+                </li>
+                <li><b>Pagination Performance</b>
+                  Added database indexes and used efficient COUNT/LIMIT queries for large catalogs.
+                </li>
+              </ul>
+              </p>
+
+              <p>
+                <b>Future Enhancements</b>
+              <ul>
+                <li>
+                  Live payment gateway integration (Stripe/PayPal) with webhooks.
+                </li>
+                <li>
+                  Product reviews, ratings, wishlists, and coupon/discount engine.
+                </li>
+                <li>
+                  Sales analytics dashboard and exportable reports.
+                </li>
+                <li>
+                  Public REST API for mobile app integration.
+                </li>
+              </ul>
+              </p>
+
+            </div>
+          </div>
+
+          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong> Web application</li>
+                <li><strong>Client</strong> Internal project</li>
+                <li><strong>Project date</strong> 2024</li>
+                <li><strong>Project URL</strong> <a href="#">Available on request</a>
+                </li>
+                <li><a href="#" class="btn-visit align-self-start">Request Demo</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Details Section -->
+
+  </main>
+
+  <footer id="footer" class="footer accent-background">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">B3th13</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href=""><i class="bi bi-twitter-x"></i></a>
+        <a href=""><i class="bi bi-facebook"></i></a>
+        <a href=""><i class="bi bi-instagram"></i></a>
+        <a href=""><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
