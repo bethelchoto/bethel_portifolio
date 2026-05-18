@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>VineCity Housing Trust – Bethel Panashe Choto</title>
-  <meta name="description" content="VineCity Housing Trust – Land allocation backend built with NestJS, MariaDB, Docker, and Nginx.">
+  <title>VineCity Housing Trust Backend – Bethel Panashe Choto</title>
+  <meta name="description" content="VineCity Housing Trust – A production-ready, highly modular monolith backend built with TypeScript, Node.js, Express 5, raw MariaDB connection pool, and automated installment scheduling.">
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
   <link href="https://fonts.googleapis.com/" rel="preconnect">
   <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -17,7 +17,68 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
   <style>
-    /* -- Compact slider -- */
+    .pre-box {
+      background: #1e1e2e;
+      color: #cdd6f4;
+      padding: 15px;
+      border-radius: 8px;
+      font-family: 'Fira Code', monospace;
+      font-size: 0.85rem;
+      overflow-x: auto;
+      border: 1px solid #313244;
+      margin-bottom: 20px;
+    }
+    .tech-table th {
+      background-color: #313244 !important;
+      color: #ffffff !important;
+    }
+    .tech-table td, .tech-table th {
+      border: 1px solid #45475a;
+    }
+    .service-card {
+      background: #f8f9fa;
+      border-left: 4px solid #cca43b; /* Premium real estate gold theme */
+      border-radius: 0 8px 8px 0;
+      padding: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .endpoint-badge {
+      font-size: 0.75rem;
+      font-weight: bold;
+      padding: 3px 6px;
+      border-radius: 4px;
+      margin-right: 8px;
+    }
+    .badge-post { background-color: #49cc90; color: white; }
+    .badge-get { background-color: #61affe; color: white; }
+    .badge-put { background-color: #fca130; color: white; }
+    .badge-delete { background-color: #f93e3e; color: white; }
+    .badge-patch { background-color: #50e3c2; color: white; }
+    
+    .alert-box {
+      border-left: 4px solid #cca43b;
+      background: #fdfaf2;
+      padding: 15px;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 20px;
+    }
+    .alert-box-title {
+      font-weight: bold;
+      color: #926d17;
+      margin-bottom: 5px;
+    }
+    
+    .mermaid-box {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      overflow-x: auto;
+    }
+
+    /* ── Compact slider ── */
     .portfolio-details-slider {
       max-width: 340px;
       margin-left: auto;
@@ -29,7 +90,8 @@
       object-fit: contain;
       border-radius: 8px;
     }
-  </style></head>
+  </style>
+</head>
 <body class="portfolio-details-page">
 
   <header id="header" class="header d-flex align-items-center sticky-top">
@@ -41,7 +103,7 @@
         <ul>
           <li><a href='index.html'>Home</a></li>
         </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
     </div>
   </header>
@@ -53,7 +115,7 @@
         <nav class="breadcrumbs">
           <ol>
             <li><a href='index.html'>Home</a></li>
-            <li class="current">VineCity Housing Trust</li>
+            <li class="current">VineCity Housing Trust Backend</li>
           </ol>
         </nav>
       </div>
@@ -62,13 +124,14 @@
     <section id="portfolio-details" class="portfolio-details section">
       <div class="container" data-aos="fade-up">
 
+        <!-- Portfolio Image Slides -->
         <div class="portfolio-details-slider swiper init-swiper">
           <script type="application/json" class="swiper-config">
             {"loop":true,"speed":600,"autoplay":{"delay":5000},"slidesPerView":"auto","navigation":{"nextEl":".swiper-button-next","prevEl":".swiper-button-prev"},"pagination":{"el":".swiper-pagination","type":"bullets","clickable":true}}
           </script>
           <div class="swiper-wrapper align-items-center">
             <div class="swiper-slide">
-              <img src="assets/img/portfolio/vinecity/dashboard.png" alt="VineCity Housing Trust Dashboard">
+              <img src="assets/img/portfolio/vinecity/dashboard.png" alt="VineCity Housing Trust Dashboard Mockup">
             </div>
           </div>
           <div class="swiper-button-prev"></div>
@@ -79,38 +142,374 @@
         <div class="row justify-content-between gy-4 mt-4">
           <div class="col-lg-8" data-aos="fade-up">
             <div class="portfolio-description">
-              <h2>VineCity Housing Trust – Land Allocation &amp; Payment Management Platform</h2>
-              <b>Overview</b>
-              <p>VineCity Housing Trust is a backend platform designed to manage land allocation workflows, payment tracking, and project lifecycle operations for a housing trust in Zimbabwe. I designed and implemented the core APIs and infrastructure to streamline administrative operations and reduce manual overhead.</p>
+              <h1 class="mb-3">🏘️ VineCity Housing Trust Backend</h1>
+              <p class="lead"><strong>A production-ready, highly modular monolith backend for the VineCity Housing Trust — managing land allocation workflows, installment-based payment schedules, granular role-based permissions, and director-level financial reports.</strong></p>
+              <p>Built with <strong>TypeScript 5/6</strong>, <strong>Node.js</strong>, <strong>Express 5</strong>, raw <strong>MariaDB connection pool</strong> (<code>mysql2/promise</code>), <strong>Multer</strong> for bulk file parsing, <strong>Nodemailer &amp; Resend</strong> for secure transactional email dispatching, and a <strong>background installment scheduler</strong>. Deployed and orchestrated via <strong>Docker Compose</strong> on a <strong>Linux VPS</strong> with <strong>Nginx</strong> reverse proxy and SSL.</p>
 
-              <p><b>Backend API Design</b></p>
+              <hr>
+
+              <!-- Table of Contents -->
+              <h3 class="mt-4">Table of Contents</h3>
               <ul>
-                <li>Designed and scaled <b>backend APIs using NestJS and MariaDB</b> to manage land allocation workflows, payment tracking, and project lifecycle operations.</li>
-                <li>Developed <b>automated installment scheduling</b> and financial ledger processing systems to reduce manual administrative overhead.</li>
-                <li>Applied <b>structured API design principles</b> with versioning and consistent error handling throughout the platform.</li>
+                <li><a href="#system-architecture">System Architecture</a></li>
+                <li><a href="#technology-stack">Technology Stack</a></li>
+                <li><a href="#domain-model--features-overview">Domain Model &amp; Features Overview</a></li>
+                <li><a href="#database-architecture--schema">Database Architecture &amp; Schema</a></li>
+                <li><a href="#allocation--installment-state-machines">Allocation &amp; Installment State Machines</a></li>
+                <!-- <li><a href="#api-reference">API Reference</a></li> -->
+                <li><a href="#getting-started">Getting Started</a></li>
+                <li><a href="#deployment--vps-optimization">VPS &amp; Docker Deployment Optimization</a></li>
+                <li><a href="#quick-test-guide">Quick Test Guide</a></li>
               </ul>
 
-              <p><b>Financial &amp; Workflow Automation</b></p>
-              <ul>
-                <li>Built <b>automated installment scheduling engines</b> that generate payment plans based on configurable terms and track payment status in real-time.</li>
-                <li>Implemented <b>financial ledger processing</b> with audit trails for all land allocation transactions and payments.</li>
-                <li>Developed <b>reporting workflows</b> to generate summaries of payment statuses, outstanding balances, and project progress.</li>
-              </ul>
+              <hr>
 
-              <p><b>Infrastructure &amp; Security</b></p>
-              <ul>
-                <li>Deployed backend infrastructure using <b>Docker</b> for containerized, reproducible builds.</li>
-                <li>Hosted on <b>Linux VPS</b> with Nginx reverse proxy configuration for secure production operations and SSL termination.</li>
-                <li>Applied <b>backend security practices</b> including authentication, authorization, and database optimization.</li>
-              </ul>
+              <!-- System Architecture -->
+              <h2 id="system-architecture" class="mt-5 mb-3">System Architecture</h2>
+              <pre class="pre-box">
+                                      ┌──────────────────────┐
+                                      │    Client Clients    │
+                                      │  (Web Portal / App)  │
+                                      └──────────┬───────────┘
+                                                 │
+                                                 │ HTTPS (Port 5000 / 3000)
+                                                 ▼
+                                ┌──────────────────────────────────┐
+                                │       Express API Gateway        │
+                                │   ┌──────────────────────────┐   │
+                                │   │ Helmet Secure Headers    │   │
+                                │   │ CORS Cross-Origin Policy │   │
+                                │   │ Auth Verification Filter │   │
+                                │   │ Swagger UI API Docs      │   │
+                                │   └─────────────┬────────────┘   │
+                                └─────────────────┼────────────────┘
+                                                  │
+                ┌─────────────────────────────────┼────────────────────────────────┐
+                ▼                                 ▼                                ▼
+     ┌─────────────────────┐           ┌─────────────────────┐          ┌─────────────────────┐
+     │    Auth & Users     │           │Phases & Stands CRUD │          │Allocations & Ledger │
+     │ ┌─────────────────┐ │           │ ┌─────────────────┐ │          │ ┌─────────────────┐ │
+     │ │ OTP Verification│ │           │ │ Bulk CSV Import │ │          │ │ Date Locks      │ │
+     │ │ Invite Tokens   │ │           │ │ Land Use Types  │ │          │ │ Next of Kin /   │ │
+     │ └─────────────────┘ │           │ └─────────────────┘ │          │ │ Beneficiaries   │ │
+     └──────────┬──────────┘           └──────────┬──────────┘          └──────────┬──────────┘
+                │                                 │                                │
+                └─────────────────────────────────┼────────────────────────────────┘
+                                                  │
+                                                  ▼
+                                ┌──────────────────────────────────┐
+                                │      MySQL2 Connection Pool      │
+                                │    (MariaDB Master-Slave Sync)   │
+                                └─────────────────┬────────────────┘
+                                                  │
+                                                  ▼
+                                ┌──────────────────────────────────┐
+                                │     Aiven Cloud MariaDB Database │
+                                │            (Port 16267)          │
+                                └──────────────────────────────────┘
 
-              <p><b>Technology Stack</b></p>
-              <ul>
-                <li><b>Backend Framework</b>: NestJS (Node.js)</li>
-                <li><b>Database</b>: MariaDB</li>
-                <li><b>Infrastructure</b>: Docker, Linux VPS, Nginx</li>
-                <li><b>Security</b>: JWT, Role-Based Access Control</li>
-              </ul>
+                                    [ Real-Time & Cloud Assets ]
+                                                 │
+                  ┌──────────────────────────────┼──────────────────────────────┐
+                  ▼                              ▼                              ▼
+       ┌────────────────────┐         ┌────────────────────┐         ┌────────────────────┐
+       │ Installment Check  │         │    Multer Parser   │         │ Resend / SMTP GMail│
+       │ (Daily Background) │         │ (Memory Cache/CSV) │         │ Invite OTP / Alert │
+       │ Status Auto-Update │         │ Stand Bulk Loaders │         │ Pass-less Setup URL│
+       └────────────────────┘         └────────────────────┘         └────────────────────┘
+              </pre>
+
+              <h4 class="mt-4">Communication Architecture Patterns</h4>
+              <table class="table tech-table">
+                <thead>
+                  <tr>
+                    <th>Interface</th>
+                    <th>Paradigm</th>
+                    <th>Transport</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>REST API</strong></td>
+                    <td>Synchronous RESTful</td>
+                    <td>HTTP/S</td>
+                    <td>Core CRUD operations, inventory cataloging, stand allocation, transaction logging, and director reporting.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Bulk Import Stream</strong></td>
+                    <td>Buffered File Stream</td>
+                    <td>Multipart POST</td>
+                    <td>Multer handles buffered memory cache layer, uploading and parsing large CSV/Excel spreadsheets of stands on the fly.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Scheduler System</strong></td>
+                    <td>Event Watcher</td>
+                    <td>Background Thread</td>
+                    <td>An in-app background event thread waking up at midnight to auto-flag due installments as <code>OVERDUE</code> and calculate financial status updates.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Email Dispatch</strong></td>
+                    <td>Queue-less Push</td>
+                    <td>SMTP / Resend</td>
+                    <td>Dispatches secure password-less invite URLs to staff/directors, email OTP verifications to registrants, and alerts via secure SSL.</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <hr>
+
+              <!-- Technology Stack -->
+              <h2 id="technology-stack" class="mt-5 mb-3">Technology Stack</h2>
+              <table class="table tech-table">
+                <thead>
+                  <tr>
+                    <th>Layer</th>
+                    <th>Dependency</th>
+                    <th>Version</th>
+                    <th>Purpose</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><strong>Runtime &amp; Core</strong></td><td>Node.js / TypeScript</td><td>^25.0 / ^5.9</td><td>Modern ESM execution environment with nodenext resolution</td></tr>
+                  <tr><td><strong>Framework</strong></td><td>Express</td><td>^5.2.1</td><td>Fast, minimalist Express 5 web framework</td></tr>
+                  <tr><td><strong>Database Pool</strong></td><td>mysql2 (promise driver)</td><td>^3.16.0</td><td>High-performance promise-based MariaDB connection driver</td></tr>
+                  <tr><td><strong>Database Engine</strong></td><td>MariaDB</td><td>^11.x (VPS / Cloud)</td><td>Open-source relational SQL database with Master-Slave replication</td></tr>
+                  <tr><td><strong>Security Layer</strong></td><td>CORS &amp; Crypto</td><td>^2.8.5</td><td>HTTP Cross-Origin rules &amp; AES-256 password/National ID encryption</td></tr>
+                  <tr><td><strong>Auth Tokens</strong></td><td>jsonwebtoken / bcryptjs</td><td>^9.0.3 / ^3.0.3</td><td>Stateless JWT tokens and salt-based password hashing</td></tr>
+                  <tr><td><strong>File Parser</strong></td><td>Multer / Papaparse / XLSX</td><td>^2.0.2 / ^5.5.3</td><td>Bulk stand parser for spreadsheets (XLSX, CSV)</td></tr>
+                  <tr><td><strong>Emailer Engine</strong></td><td>Resend / Nodemailer</td><td>^6.7.0 / ^7.0.12</td><td>SMTP Gmail transport &amp; high-delivery Resend provider</td></tr>
+                  <tr><td><strong>API Documentation</strong></td><td>Swagger JSdoc / Swagger UI</td><td>^6.2.8 / ^5.0.1</td><td>Autogenerated, interactive Swagger documentation</td></tr>
+                  <tr><td><strong>Local Watcher</strong></td><td>TSX watch</td><td>^4.21.0</td><td>High-speed TSX compiler for real-time local watch transpilation</td></tr>
+                </tbody>
+              </table>
+
+              <hr>
+
+              <!-- Domain Model & Features Overview -->
+              <h2 id="domain-model--features-overview" class="mt-5 mb-3">Domain Model &amp; Features Overview</h2>
+              <p>The platform is designed around strict database integrity rules, transaction auditing, and a highly granular permissions system:</p>
+
+              <div class="service-card">
+                <h5>👤 1. Authentication &amp; Password-Less Invites</h5>
+                <ul>
+                  <li><strong>Stateless JWT Authorization:</strong> Secures sessions with cryptographically signed tokens containing role and module claims.</li>
+                  <li><strong>Two-Step Email Activation:</strong> Registers standard profiles with SMTP-dispatched 6-digit OTP verification codes.</li>
+                  <li><strong>Staff &amp; Director Invite Workflows:</strong> Admin issues a secure <code>invite_token</code> that allows directors/staff to set their password through a personalized onboarding link without pre-registering.</li>
+                </ul>
+              </div>
+
+              <div class="service-card">
+                <h5>🏘️ 2. Development Phases &amp; Stands Catalog</h5>
+                <ul>
+                  <li><strong>Multi-Phase Infrastructure:</strong> Phases act as target housing development projects, allowing administrators to enable or disable phases and all child stands.</li>
+                  <li><strong>Rich Land Use Attributes:</strong> Tracks detailed stand profiles with land usage designations, sizes, base valuations, and availability statuses.</li>
+                  <li><strong>Bulk Spreadsheet Importing:</strong> Allows staff to upload <code>.xlsx</code> or <code>.csv</code> files via Multer to import hundreds of stands at once.</li>
+                </ul>
+              </div>
+
+              <div class="service-card">
+                <h5>📅 3. Land Allocations</h5>
+                <ul>
+                  <li><strong>Conflict Prevention Lock:</strong> Implements strict application logic checking for existing <code>ACTIVE</code> allocations, preventing a stand from being dual-allocated.</li>
+                  <li><strong>JSON Metadata Assets:</strong> Stores up to 4 Next of Kin and 4 Beneficiary profiles directly inside the allocation ledger using JSON fields.</li>
+                  <li><strong>Auditable Lifecycle:</strong> Tracks allocation status (<code>ACTIVE</code>, <code>DEALLOCATED</code>), deallocation timestamps, and the recording operator.</li>
+                </ul>
+              </div>
+
+              <div class="service-card">
+                <h5>💰 4. Payment Ledger &amp; Installments</h5>
+                <ul>
+                  <li><strong>Unified Payment Contract:</strong> Automatically generates payment records representing the total contracted stand value, amount paid, and outstanding balance.</li>
+                  <li><strong>Installment Generation Engine:</strong> Automatically breaks down payment contracts into configurable installments with customized due dates and amounts.</li>
+                  <li><strong>Diverse Transaction Modes:</strong> Supports multiple payment types (<code>ONCE_OFF</code>, <code>INSTALLMENT</code>, <code>DONATION</code>, <code>STAFF</code>, <code>REPLACE</code>) and methods (<code>CASH</code>, <code>BANK</code>, <code>CARD</code>, <code>ECOCASH</code>).</li>
+                  <li><strong>Debt Write-offs:</strong> Supports write-off adjustments (<code>amount_write_off</code>) to balance accounts in dispute or for special allocations.</li>
+                </ul>
+              </div>
+
+              <div class="service-card">
+                <h5>💸 5. Expense Tracking</h5>
+                <ul>
+                  <li><strong>Operational &amp; Daily Bookkeeping:</strong> Tracks company expenditures categorised by type (<code>OPERATIONAL</code>, <code>DAILY</code>), detailing descriptions, amounts, and dates.</li>
+                  <li><strong>Physical Signatures &amp; Collections:</strong> Logs who authorized the expense, who collected the cash, and saves signature data for administrative accountability.</li>
+                </ul>
+              </div>
+
+              <div class="service-card">
+                <h5>🛡️ 6. Granular RBAC Permissions</h5>
+                <ul>
+                  <li><strong>Granular Module Rules:</strong> Restricts access on a module-action basis (<code>users</code>, <code>stands</code>, <code>phases</code>, <code>allocations</code>, <code>payments</code>, <code>installments</code>, <code>expenses</code>, <code>reports</code> paired with <code>read</code>, <code>write</code>, <code>manage</code>, <code>delete</code>).</li>
+                  <li><strong>User Overrides:</strong> Admins can define broad role permissions or apply custom overrides for specific individual users.</li>
+                </ul>
+              </div>
+
+              <div class="service-card">
+                <h5>📊 7. Director Financial Dashboards</h5>
+                <ul>
+                  <li><strong>High-Level Financial Summaries:</strong> Financial collections aggregated into contracted value, paid volume, outstanding debt, and collection rates.</li>
+                  <li><strong>Risk Metrics &amp; Aging Reports:</strong> Group outstanding debts into 30, 60, 90, and 90+ day buckets.</li>
+                  <li><strong>Defaulter Registers:</strong> Identifies stands with low payment percentages compared to expectations.</li>
+                </ul>
+              </div>
+
+              <hr>
+
+              <!-- Database Architecture -->
+              <h2 id="database-architecture--schema" class="mt-5 mb-3">Database Architecture &amp; Schema</h2>
+              <div class="mermaid-box">
+                <pre style="font-family: 'Fira Code', monospace; font-size: 0.85rem; margin: 0;">
+  Entity-Relationship Diagram
+  ===========================
+  
+  users ||--o{ phases : "creates"
+  users ||--o{ stands : "creates"
+  users ||--o{ owners : "registers"
+  users ||--o{ allocations : "allocates"
+  users ||--o{ payment_transactions : "receives"
+  users ||--o{ expenses : "logs"
+  users ||--o{ profile_audit_logs : "audits"
+  
+  owners ||--o{ allocations : "has"
+  owners ||--o{ owner_accounts : "logs in with"
+  
+  phases ||--o{ stands : "contains"
+  
+  stands ||--o{ allocations : "allocated to"
+  
+  allocations ||--o| payments : "has financial contract"
+  allocations ||--o{ owner_accounts : "links portal login"
+  
+  payments ||--o{ payment_transactions : "records receipts"
+  payments ||--o{ installments : "contains schedule"
+                </pre>
+              </div>
+
+              <h4 class="mt-4">Core Enumerated Types</h4>
+              <pre class="pre-box">
+Role:               ADMIN | STAFF | DIRECTOR | USER
+PaymentType:        ONCE_OFF | INSTALLMENT | DONATION | STAFF | REPLACE
+TransactionMethod:  CASH | BANK | ECOCASH | CARD | DONATION | STAFF | REPLACE
+PaymentStatus:      PENDING | ONGOING | PAID | CANCELLED
+InstallmentStatus:  PENDING | PAID | OVERDUE
+AllocationStatus:   ACTIVE | DEALLOCATED
+ExpenseType:        OPERATIONAL | DAILY
+              </pre>
+
+              <hr>
+
+              <!-- Allocation & Installment State Machines -->
+              <h2 id="allocation--installment-state-machines" class="mt-5 mb-3">Allocation &amp; Installment State Machines</h2>
+              
+              <h4 class="mt-4">Land Allocation Lifecycle</h4>
+              <pre class="pre-box">
+             ┌───────────────┐
+             │    ACTIVE     │
+             └───────┬───────┘
+                     │ Staff cancels / Owner Defaults (Deallocation)
+                     ▼
+             ┌───────────────┐
+             │  DEALLOCATED  │  ──► (Stand status reverts back to 'On_Sale')
+             └───────────────┘
+              </pre>
+
+              <h4 class="mt-4">Installment Schedule Lifecycle</h4>
+              <pre class="pre-box">
+  ┌──────────────┐       Midnight Check      ┌───────────────┐
+  │   PENDING    ├──────────────────────────►│    OVERDUE    │
+  └──────┬───────┘       (Due Date Passed)   └───────┬───────┘
+         │                                           │
+         │ Payment Logged                            │ Payment Logged
+         └───────────────┬───────────────────────────┘
+                         ▼
+                 ┌───────────────┐
+                 │     PAID      │
+                 └───────────────┘
+              </pre>
+
+              <hr>
+
+              <!-- API Reference (commented out to preserve user declutter preference)
+              <h2 id="api-reference" class="mt-5 mb-3">API Reference</h2>
+              <p>All backend requests require authentication headers unless marked public: <br><code>Authorization: Bearer &lt;jwt-token&gt;</code></p>
+
+              <h4 class="mt-4">Authentication & Onboarding — <code>/api/auth</code></h4>
+              <table class="table tech-table">
+                <thead>
+                  <tr>
+                    <th>Method</th>
+                    <th>Endpoint</th>
+                    <th>Auth</th>
+                    <th>Payload Schema</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><span class="endpoint-badge badge-post">POST</span></td><td><code>/register</code></td><td>Public</td><td><code>{ email, password, name }</code></td><td>Register profile, triggers verification.</td></tr>
+                  <tr><td><span class="endpoint-badge badge-post">POST</span></td><td><code>/verify-email</code></td><td>Public</td><td><code>{ email, code }</code></td><td>Verifies account using 6-digit OTP code.</td></tr>
+                  <tr><td><span class="endpoint-badge badge-post">POST</span></td><td><code>/login</code></td><td>Public</td><td><code>{ email, password }</code></td><td>Authenticates user; returns dynamic JWT.</td></tr>
+                  <tr><td><span class="endpoint-badge badge-post">POST</span></td><td><code>/set-password</code></td><td>Public</td><td><code>{ invite_token, password }</code></td><td>Onboards invited staff/directors password-lessly.</td></tr>
+                </tbody>
+              </table>
+
+              <h4 class="mt-4">Inventory Catalog (Phases & Stands) — <code>/api/phases</code> &amp; <code>/api/stands</code></h4>
+              <table class="table tech-table">
+                <thead>
+                  <tr>
+                    <th>Method</th>
+                    <th>Endpoint</th>
+                    <th>Auth</th>
+                    <th>Payload / Query</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><span class="endpoint-badge badge-post">POST</span></td><td><code>/api/phases</code></td><td><code>ADMIN</code></td><td><code>{ name, code, description }</code></td><td>Create phase.</td></tr>
+                  <tr><td><span class="endpoint-badge badge-get">GET</span></td><td><code>/api/phases</code></td><td>Authenticated</td><td>None</td><td>Lists all phase projects.</td></tr>
+                  <tr><td><span class="endpoint-badge badge-patch">PATCH</span></td><td><code>/api/phases/:id/disable</code></td><td><code>ADMIN</code></td><td>Path: <code>id</code></td><td>Disables phase and its stands.</td></tr>
+                  <tr><td><span class="endpoint-badge badge-post">POST</span></td><td><code>/api/stands</code></td><td><code>write</code> permission</td><td><code>{ stand_number, size, price, phase_id }</code></td><td>Creates individual stand catalog entry.</td></tr>
+                  <tr><td><span class="endpoint-badge badge-post">POST</span></td><td><code>/api/stands/bulk</code></td><td><code>write</code> permission</td><td>Multipart Key: <code>file</code> (CSV / XLSX)</td><td>Parses spreadsheet, bulk imports stands.</td></tr>
+                </tbody>
+              </table>
+
+              <h4 class="mt-4">Owners &amp; Sales — <code>/api/owners</code> &amp; <code>/api/allocations</code></h4>
+              <table class="table tech-table">
+                <thead>
+                  <tr>
+                    <th>Method</th>
+                    <th>Endpoint</th>
+                    <th>Auth</th>
+                    <th>Payload Schema</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><span class="endpoint-badge badge-post">POST</span></td><td><code>/api/owners</code></td><td><code>write</code> permission</td><td><code>{ full_name, phone_number, email, national_id_number, date_of_birth, gender, address }</code></td><td>Encrypts National ID, registers owner.</td></tr>
+                  <tr><td><span class="endpoint-badge badge-post">POST</span></td><td><code>/api/allocations</code></td><td><code>write</code> permission</td><td><code>{ stand_id, owner_id, payment_plan: { total_amount, payment_type, installment_count, installment_amount, start_date }, next_of_kin: [], beneficiaries: [], username, password }</code></td><td>Allocates stand, generates payment schedules, and opens client portal logins.</td></tr>
+                  <tr><td><span class="endpoint-badge badge-delete">DELETE</span></td><td><code>/api/allocations/:id</code></td><td><code>ADMIN</code></td><td>Path: <code>id</code></td><td>Soft deallocation. Returns stand to On Sale.</td></tr>
+                </tbody>
+              </table>
+
+              <h4 class="mt-4">Payments Ledger — <code>/api/allocations</code></h4>
+              <table class="table tech-table">
+                <thead>
+                  <tr>
+                    <th>Method</th>
+                    <th>Endpoint</th>
+                    <th>Auth</th>
+                    <th>Payload Schema</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><span class="endpoint-badge badge-post">POST</span></td><td><code>/payments/:allocationId/pay</code></td><td><code>write</code> permission</td><td><code>{ amount, method, reference, paid_at }</code></td><td>Log once-off or general payment against contract.</td></tr>
+                  <tr><td><span class="endpoint-badge badge-post">POST</span></td><td><code>/:allocationId/installments/pay</code></td><td><code>write</code> permission</td><td><code>{ installment_id, amount, method, reference, paid_at }</code></td><td>Log payment targeting specific installment.</td></tr>
+                </tbody>
+              </table>
+
+              -->
+
+              <hr>
+
             </div>
           </div>
 
@@ -118,13 +517,14 @@
             <div class="portfolio-info">
               <h3>Project information</h3>
               <ul>
-                <li><strong>Category</strong> Real Estate / Housing Management</li>
+                <li><strong>Category</strong> Real Estate / Housing Monolith</li>
                 <li><strong>Client</strong> VineCity Housing Trust</li>
-                <li><strong>Role</strong> Senior Backend Developer</li>
+                <li><strong>Role</strong> Lead Backend Software Engineer</li>
                 <li><strong>Project date</strong> Jan 2026 – Apr 2026</li>
-                <li><strong>Stack</strong> NestJS, MariaDB, Docker, Nginx</li>
-                <li><strong>Deployment</strong> Linux VPS (Production)</li>
-                <li><strong>Location</strong> Zimbabwe</li>
+                <li><strong>Stack</strong> TypeScript, Node.js, Express 5, mysql2 connection pool, MariaDB</li>
+                <li><strong>Architecture</strong> Modular Monolith</li>
+                <li><strong>Deployment</strong> Docker VPS (Contabo Production)</li>
+                <li><strong>Location</strong> Harare, Zimbabwe</li>
               </ul>
             </div>
           </div>
@@ -139,17 +539,23 @@
         <p>© <span>Copyright</span> <strong class="px-1 sitename">B3th13</strong> <span>All Rights Reserved</span></p>
       </div>
       <div class="social-links d-flex justify-content-center">
-        <a href="#"><i class="bi bi-twitter-x"></i></a>
-        <a href="#"><i class="bi bi-facebook"></i></a>
-        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href=""><i class="bi bi-twitter-x"></i></a>
+        <a href=""><i class="bi bi-facebook"></i></a>
+        <a href=""><i class="bi bi-instagram"></i></a>
         <a href="https://www.linkedin.com/in/bethel-panashe-choto/"><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="credits">
+        Designed by <a href="#">bethelchoto</a>
       </div>
     </div>
   </footer>
 
+  <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
   <div id="preloader"></div>
 
+  <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
