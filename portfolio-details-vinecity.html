@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>VineCity Housing Trust – Bethel Panashe Choto</title>
+  <meta name="description" content="VineCity Housing Trust – Land allocation backend built with NestJS, MariaDB, Docker, and Nginx.">
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com/" rel="preconnect">
+  <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+<body class="portfolio-details-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a class='logo d-flex align-items-center' href='index.html'>
+        <h1 class="sitename">Bethel Panashe Choto</h1>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href='index.html'>Home</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="page-title" data-aos="fade">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">Portfolio Details</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href='index.html'>Home</a></li>
+            <li class="current">VineCity Housing Trust</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <section id="portfolio-details" class="portfolio-details section">
+      <div class="container" data-aos="fade-up">
+
+        <div class="portfolio-details-slider swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {"loop":true,"speed":600,"autoplay":{"delay":5000},"slidesPerView":"auto","navigation":{"nextEl":".swiper-button-next","prevEl":".swiper-button-prev"},"pagination":{"el":".swiper-pagination","type":"bullets","clickable":true}}
+          </script>
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide">
+              <img src="assets/img/portfolio/vinecity/dashboard.png" alt="VineCity Housing Trust Dashboard">
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="row justify-content-between gy-4 mt-4">
+          <div class="col-lg-8" data-aos="fade-up">
+            <div class="portfolio-description">
+              <h2>VineCity Housing Trust – Land Allocation &amp; Payment Management Platform</h2>
+              <b>Overview</b>
+              <p>VineCity Housing Trust is a backend platform designed to manage land allocation workflows, payment tracking, and project lifecycle operations for a housing trust in Zimbabwe. I designed and implemented the core APIs and infrastructure to streamline administrative operations and reduce manual overhead.</p>
+
+              <p><b>Backend API Design</b></p>
+              <ul>
+                <li>Designed and scaled <b>backend APIs using NestJS and MariaDB</b> to manage land allocation workflows, payment tracking, and project lifecycle operations.</li>
+                <li>Developed <b>automated installment scheduling</b> and financial ledger processing systems to reduce manual administrative overhead.</li>
+                <li>Applied <b>structured API design principles</b> with versioning and consistent error handling throughout the platform.</li>
+              </ul>
+
+              <p><b>Financial &amp; Workflow Automation</b></p>
+              <ul>
+                <li>Built <b>automated installment scheduling engines</b> that generate payment plans based on configurable terms and track payment status in real-time.</li>
+                <li>Implemented <b>financial ledger processing</b> with audit trails for all land allocation transactions and payments.</li>
+                <li>Developed <b>reporting workflows</b> to generate summaries of payment statuses, outstanding balances, and project progress.</li>
+              </ul>
+
+              <p><b>Infrastructure &amp; Security</b></p>
+              <ul>
+                <li>Deployed backend infrastructure using <b>Docker</b> for containerized, reproducible builds.</li>
+                <li>Hosted on <b>Linux VPS</b> with Nginx reverse proxy configuration for secure production operations and SSL termination.</li>
+                <li>Applied <b>backend security practices</b> including authentication, authorization, and database optimization.</li>
+              </ul>
+
+              <p><b>Technology Stack</b></p>
+              <ul>
+                <li><b>Backend Framework</b>: NestJS (Node.js)</li>
+                <li><b>Database</b>: MariaDB</li>
+                <li><b>Infrastructure</b>: Docker, Linux VPS, Nginx</li>
+                <li><b>Security</b>: JWT, Role-Based Access Control</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong> Real Estate / Housing Management</li>
+                <li><strong>Client</strong> VineCity Housing Trust</li>
+                <li><strong>Role</strong> Backend Developer</li>
+                <li><strong>Project date</strong> Jan 2026 – Apr 2026</li>
+                <li><strong>Stack</strong> NestJS, MariaDB, Docker, Nginx</li>
+                <li><strong>Deployment</strong> Linux VPS (Production)</li>
+                <li><strong>Location</strong> Zimbabwe</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer accent-background">
+    <div class="container">
+      <div class="copyright text-center">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">B3th13</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href="#"><i class="bi bi-twitter-x"></i></a>
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/bethel-panashe-choto/"><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
