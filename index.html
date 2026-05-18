@@ -107,12 +107,12 @@
               </div>
               <div class="col-lg-7 about-info">
                 <p><strong>Name: </strong> <span>Bethel Panashe Choto</span></p>
-                <p><strong>Company Name: </strong> <span>Primus Technology</span></p>
-                <p><strong>Position: </strong> <span>Backend Java Software Engineer</span></p>
+                <p><strong>Company Name: </strong> <span>Tribetron</span></p>
+                <p><strong>Position: </strong> <span>Backend Software Engineer (Java)</span></p>
                 <p><strong>Date of Birth: </strong> <span>30 June 2000</span></p>
                 <p><strong>City: </strong> <span>Harare, Zimbabwe</span></p>
                 <p><strong>Phone: </strong> <span>+263 78 6122 047</span></p>
-                <p><strong>Email: </strong> <span>chotobethel68@gmail.com</span></p>
+                <p><strong>Email: </strong> <span>chotobethelp</span></p>
                 <p><strong>Degree: </strong> <span>Bsc Computer Science</span></p>
               </div>
             </div>
@@ -139,7 +139,8 @@
               </div>
 
               <div class="progress">
-                <span class="skill"><span>Apache Kafka &amp; Event-Driven Architecture</span> <i class="val">88%</i></span>
+                <span class="skill"><span>Apache Kafka &amp; Event-Driven Architecture</span> <i
+                    class="val">88%</i></span>
                 <div class="progress-bar-wrap">
                   <div class="progress-bar" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
                   </div>
@@ -169,7 +170,12 @@
             <div class="about-me">
               <h4>About Me</h4>
               <p>
-                Backend-focused Software Engineer with experience building scalable fintech platforms, distributed microservices systems, and cloud-native applications using Java, Spring Boot, Node.js, and TypeScript. Skilled in designing secure APIs, event-driven architectures, real-time systems, and high-availability backend infrastructure. Experienced with microservices, Kafka, Docker, Kubernetes, PostgreSQL, Redis, and AWS, with strong emphasis on system design, Test-Driven Development (TDD), security-focused engineering, and Agile software delivery practices.
+                Backend-focused Software Engineer with experience building scalable fintech platforms, distributed
+                microservices systems, and cloud-native applications using Java, Spring Boot, Node.js, and TypeScript.
+                Skilled in designing secure APIs, event-driven architectures, real-time systems, and high-availability
+                backend infrastructure. Experienced with microservices, Kafka, Docker, Kubernetes, PostgreSQL, Redis,
+                and AWS, with strong emphasis on system design, Test-Driven Development (TDD), security-focused
+                engineering, and Agile software delivery practices.
               </p>
             </div>
 
@@ -222,118 +228,119 @@
               <!-- End Skills Item -->
 
               <div class="progress">
-                <span class="skill"><span>Mobile Application (Flutter &amp; React Native)</span> <i class="val">85%</i></span>
+                <span class="skill"><span>Mobile Application (Flutter &amp; React Native)</span> <i
+                    class="val">85%</i></span>
                 <div class="progress-bar-wrap">
                   <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
                   </div>
                 </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Toggle Button for Key Skills & Interests -->
+          <div class="text-center mt-5">
+            <button class="btn-skills-toggle active" id="toggle-skills-btn" onclick="toggleSkillsHub()">
+              <span class="btn-text">Hide Detailed Tech Stack</span>
+              <i class="bi bi-chevron-down ms-2 toggle-icon"></i>
+            </button>
+          </div>
+
+          <!-- Collapsible Key Skills & Interests Grid -->
+          <div id="detailed-skills-hub" class="skills-hub-container show">
+            <div class="skills-grid mt-4">
+              <!-- Category 1 -->
+              <div class="skill-category-card" data-aos="fade-up" data-aos-delay="100">
+                <h4><i class="bi bi-cpu"></i> Backend & Distributed Systems</h4>
+                <div class="skills-badges-wrap">
+                  <span class="skill-badge">Java</span>
+                  <span class="skill-badge">Spring Boot</span>
+                  <span class="skill-badge">Spring Cloud</span>
+                  <span class="skill-badge">Node.js</span>
+                  <span class="skill-badge">NestJS</span>
+                  <span class="skill-badge">Express.js</span>
+                  <span class="skill-badge">REST APIs</span>
+                  <span class="skill-badge">Microservices Architecture</span>
+                  <span class="skill-badge">Apache Kafka</span>
+                </div>
+              </div>
+
+              <!-- Category 2 -->
+              <div class="skill-category-card" data-aos="fade-up" data-aos-delay="150">
+                <h4><i class="bi bi-cloud-arrow-up"></i> Cloud, DevOps & Infrastructure</h4>
+                <div class="skills-badges-wrap">
+                  <span class="skill-badge">AWS (Lambda, DynamoDB)</span>
+                  <span class="skill-badge">Docker</span>
+                  <span class="skill-badge">Kubernetes</span>
+                  <span class="skill-badge">Nginx</span>
+                  <span class="skill-badge">Linux (Ubuntu)</span>
+                  <span class="skill-badge">GitHub Actions</span>
+                  <span class="skill-badge">CI/CD Automation</span>
+                </div>
+              </div>
+
+              <!-- Category 3 -->
+              <div class="skill-category-card" data-aos="fade-up" data-aos-delay="200">
+                <h4><i class="bi bi-database"></i> Databases & Caching</h4>
+                <div class="skills-badges-wrap">
+                  <span class="skill-badge">PostgreSQL</span>
+                  <span class="skill-badge">MariaDB</span>
+                  <span class="skill-badge">MySQL</span>
+                  <span class="skill-badge">Redis</span>
+                </div>
+              </div>
+
+              <!-- Category 4 -->
+              <div class="skill-category-card" data-aos="fade-up" data-aos-delay="250">
+                <h4><i class="bi bi-window-side"></i> Frontend & Mobile Technologies</h4>
+                <div class="skills-badges-wrap">
+                  <span class="skill-badge">Angular</span>
+                  <span class="skill-badge">Vue.js</span>
+                  <span class="skill-badge">Flutter</span>
+                  <span class="skill-badge">React Native</span>
+                </div>
+              </div>
+
+              <!-- Category 5 -->
+              <div class="skill-category-card" data-aos="fade-up" data-aos-delay="300">
+                <h4><i class="bi bi-people"></i> Engineering Practices & Collab</h4>
+                <div class="skills-badges-wrap">
+                  <span class="skill-badge">System Design</span>
+                  <span class="skill-badge">Agile/Scrum</span>
+                  <span class="skill-badge">Test-Driven Development (TDD)</span>
+                  <span class="skill-badge">Security-Focused Development</span>
+                  <span class="skill-badge">Git</span>
+                  <span class="skill-badge">JIRA</span>
+                  <span class="skill-badge">Trello</span>
+                </div>
+              </div>
+
+              <!-- Category 6 -->
+              <div class="skill-category-card" data-aos="fade-up" data-aos-delay="350">
+                <h4><i class="bi bi-robot"></i> AI-Assisted Development</h4>
+                <div class="skills-badges-wrap">
+                  <span class="skill-badge">GitHub Copilot</span>
+                  <span class="skill-badge">Claude Code</span>
+                  <span class="skill-badge">Prompt Engineering</span>
+                </div>
+              </div>
+
+              <!-- Category 7 -->
+              <div class="skill-category-card" data-aos="fade-up" data-aos-delay="400">
+                <h4><i class="bi bi-code-slash"></i> Programming Languages</h4>
+                <div class="skills-badges-wrap">
+                  <span class="skill-badge">Java</span>
+                  <span class="skill-badge">TypeScript/JavaScript</span>
+                  <span class="skill-badge">Python</span>
+                  <span class="skill-badge">SQL</span>
+                  <span class="skill-badge">C</span>
+                </div>
+              </div>
             </div>
           </div>
 
         </div>
-
-        <!-- Toggle Button for Key Skills & Interests -->
-        <div class="text-center mt-5">
-          <button class="btn-skills-toggle active" id="toggle-skills-btn" onclick="toggleSkillsHub()">
-            <span class="btn-text">Hide Detailed Tech Stack</span>
-            <i class="bi bi-chevron-down ms-2 toggle-icon"></i>
-          </button>
-        </div>
-
-        <!-- Collapsible Key Skills & Interests Grid -->
-        <div id="detailed-skills-hub" class="skills-hub-container show">
-          <div class="skills-grid mt-4">
-            <!-- Category 1 -->
-            <div class="skill-category-card" data-aos="fade-up" data-aos-delay="100">
-              <h4><i class="bi bi-cpu"></i> Backend & Distributed Systems</h4>
-              <div class="skills-badges-wrap">
-                <span class="skill-badge">Java</span>
-                <span class="skill-badge">Spring Boot</span>
-                <span class="skill-badge">Spring Cloud</span>
-                <span class="skill-badge">Node.js</span>
-                <span class="skill-badge">NestJS</span>
-                <span class="skill-badge">Express.js</span>
-                <span class="skill-badge">REST APIs</span>
-                <span class="skill-badge">Microservices Architecture</span>
-                <span class="skill-badge">Apache Kafka</span>
-              </div>
-            </div>
-
-            <!-- Category 2 -->
-            <div class="skill-category-card" data-aos="fade-up" data-aos-delay="150">
-              <h4><i class="bi bi-cloud-arrow-up"></i> Cloud, DevOps & Infrastructure</h4>
-              <div class="skills-badges-wrap">
-                <span class="skill-badge">AWS (Lambda, DynamoDB)</span>
-                <span class="skill-badge">Docker</span>
-                <span class="skill-badge">Kubernetes</span>
-                <span class="skill-badge">Nginx</span>
-                <span class="skill-badge">Linux (Ubuntu)</span>
-                <span class="skill-badge">GitHub Actions</span>
-                <span class="skill-badge">CI/CD Automation</span>
-              </div>
-            </div>
-
-            <!-- Category 3 -->
-            <div class="skill-category-card" data-aos="fade-up" data-aos-delay="200">
-              <h4><i class="bi bi-database"></i> Databases & Caching</h4>
-              <div class="skills-badges-wrap">
-                <span class="skill-badge">PostgreSQL</span>
-                <span class="skill-badge">MariaDB</span>
-                <span class="skill-badge">MySQL</span>
-                <span class="skill-badge">Redis</span>
-              </div>
-            </div>
-
-            <!-- Category 4 -->
-            <div class="skill-category-card" data-aos="fade-up" data-aos-delay="250">
-              <h4><i class="bi bi-window-side"></i> Frontend & Mobile Technologies</h4>
-              <div class="skills-badges-wrap">
-                <span class="skill-badge">Angular</span>
-                <span class="skill-badge">Vue.js</span>
-                <span class="skill-badge">Flutter</span>
-                <span class="skill-badge">React Native</span>
-              </div>
-            </div>
-
-            <!-- Category 5 -->
-            <div class="skill-category-card" data-aos="fade-up" data-aos-delay="300">
-              <h4><i class="bi bi-people"></i> Engineering Practices & Collab</h4>
-              <div class="skills-badges-wrap">
-                <span class="skill-badge">System Design</span>
-                <span class="skill-badge">Agile/Scrum</span>
-                <span class="skill-badge">Test-Driven Development (TDD)</span>
-                <span class="skill-badge">Security-Focused Development</span>
-                <span class="skill-badge">Git</span>
-                <span class="skill-badge">JIRA</span>
-                <span class="skill-badge">Trello</span>
-              </div>
-            </div>
-
-            <!-- Category 6 -->
-            <div class="skill-category-card" data-aos="fade-up" data-aos-delay="350">
-              <h4><i class="bi bi-robot"></i> AI-Assisted Development</h4>
-              <div class="skills-badges-wrap">
-                <span class="skill-badge">GitHub Copilot</span>
-                <span class="skill-badge">Claude Code</span>
-                <span class="skill-badge">Prompt Engineering</span>
-              </div>
-            </div>
-
-            <!-- Category 7 -->
-            <div class="skill-category-card" data-aos="fade-up" data-aos-delay="400">
-              <h4><i class="bi bi-code-slash"></i> Programming Languages</h4>
-              <div class="skills-badges-wrap">
-                <span class="skill-badge">Java</span>
-                <span class="skill-badge">TypeScript/JavaScript</span>
-                <span class="skill-badge">Python</span>
-                <span class="skill-badge">SQL</span>
-                <span class="skill-badge">C</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
       </div>
       </div>
       </div>
@@ -357,7 +364,12 @@
 
             <div class="resume-item pb-0">
               <h4>Bethel Panashe Choto</h4>
-              <p><em>Backend-focused Software Engineer with experience building scalable fintech platforms, distributed microservices systems, and cloud-native applications using Java, Spring Boot, Node.js, and TypeScript. Skilled in designing secure APIs, event-driven architectures, real-time systems, and high-availability backend infrastructure. Experienced with microservices, Kafka, Docker, Kubernetes, PostgreSQL, Redis, and AWS, with strong emphasis on system design, Test-Driven Development (TDD), security-focused engineering, and Agile software delivery practices.</em></p>
+              <p><em>Backend-focused Software Engineer with experience building scalable fintech platforms, distributed
+                  microservices systems, and cloud-native applications using Java, Spring Boot, Node.js, and TypeScript.
+                  Skilled in designing secure APIs, event-driven architectures, real-time systems, and high-availability
+                  backend infrastructure. Experienced with microservices, Kafka, Docker, Kubernetes, PostgreSQL, Redis,
+                  and AWS, with strong emphasis on system design, Test-Driven Development (TDD), security-focused
+                  engineering, and Agile software delivery practices.</em></p>
 
               <ul>
                 <li>7/8 Conager Rd, Waterfalls</li>
@@ -401,13 +413,20 @@
               <h5>Dec 2025 – Present</h5>
               <p><em>Primus Technology | Bike Delivery, Harare, Zimbabwe</em></p>
               <ul>
-                <li>Architected and developed an 11-service microservices delivery platform using Java 24, Spring Boot, and Spring Cloud for real-time logistics and rider coordination.</li>
-                <li>Built fault-tolerant distributed systems using Resilience4j, API Gateway patterns, and centralized service communication strategies to improve platform reliability during high traffic loads.</li>
-                <li>Engineered event-driven asynchronous workflows using Apache Kafka to synchronize delivery lifecycle events across multiple independent services.</li>
-                <li>Implemented Redis GeoSpatial search algorithms for efficient rider-to-delivery matching and reduced dispatch response times.</li>
-                <li>Designed secure authentication and authorization services using JWT-based security and idempotent payment processing mechanisms.</li>
-                <li>Containerized services using Docker and orchestrated deployments with Kubernetes and GitHub Actions CI/CD pipelines.</li>
-                <li>Applied Test-Driven Development (TDD), API testing, and security-focused development practices throughout the software lifecycle.</li>
+                <li>Architected and developed an 11-service microservices delivery platform using Java 24, Spring Boot,
+                  and Spring Cloud for real-time logistics and rider coordination.</li>
+                <li>Built fault-tolerant distributed systems using Resilience4j, API Gateway patterns, and centralized
+                  service communication strategies to improve platform reliability during high traffic loads.</li>
+                <li>Engineered event-driven asynchronous workflows using Apache Kafka to synchronize delivery lifecycle
+                  events across multiple independent services.</li>
+                <li>Implemented Redis GeoSpatial search algorithms for efficient rider-to-delivery matching and reduced
+                  dispatch response times.</li>
+                <li>Designed secure authentication and authorization services using JWT-based security and idempotent
+                  payment processing mechanisms.</li>
+                <li>Containerized services using Docker and orchestrated deployments with Kubernetes and GitHub Actions
+                  CI/CD pipelines.</li>
+                <li>Applied Test-Driven Development (TDD), API testing, and security-focused development practices
+                  throughout the software lifecycle.</li>
               </ul>
             </div>
             <!-- End Resume Item -->
@@ -705,7 +724,8 @@
                 <h4>EventPlanner API Backend</h4>
                 <p>Mobile Application Backend</p>
                 <a href="assets/img/portfolio/eventplanning/eventplanner logo.png" title="EventPlanner API Backend"
-                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                    class="bi bi-zoom-in"></i></a>
                 <a href="portfolio-details-event-planning.html" title="More Details" class="details-link"><i
                     class="bi bi-link-45deg"></i></a>
               </div>
@@ -797,7 +817,8 @@
             <!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/portfolio/bike-delivery/dashboard.png" class="img-fluid" alt="Primus Bike Delivery Platform">
+              <img src="assets/img/portfolio/bike-delivery/dashboard.png" class="img-fluid"
+                alt="Primus Bike Delivery Platform">
               <div class="portfolio-info">
                 <h4>Primus Bike Delivery</h4>
                 <p>Web Application</p>
@@ -1169,12 +1190,12 @@
       const skillsHub = document.getElementById('detailed-skills-hub');
       const toggleBtn = document.getElementById('toggle-skills-btn');
       const btnText = toggleBtn.querySelector('.btn-text');
-      
+
       if (skillsHub.classList.contains('show')) {
         skillsHub.classList.remove('show');
         toggleBtn.classList.remove('active');
         btnText.textContent = 'View Detailed Tech Stack & Interests';
-        
+
         // Scroll back to the button smoothly so the user doesn't get lost
         setTimeout(() => {
           toggleBtn.scrollIntoView({ behavior: 'smooth', block: 'center' });
