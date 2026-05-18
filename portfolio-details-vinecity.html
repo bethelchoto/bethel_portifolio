@@ -510,6 +510,180 @@ ExpenseType:        OPERATIONAL | DAILY
 
               <hr>
 
+              <!-- Getting Started -->
+              <h2 id="getting-started" class="mt-5 mb-3">Getting Started</h2>
+              
+              <h4 class="mt-4">Prerequisites</h4>
+              <ul>
+                <li><strong>Node.js</strong> v22.x or v24.x (LTS)</li>
+                <li><strong>NPM</strong> v10.x+</li>
+                <li><strong>MariaDB</strong> or <strong>MySQL</strong> server instance</li>
+              </ul>
+
+              <h4 class="mt-4">Environment Configuration</h4>
+              <p>Create a <code>.env</code> file in the root directory:</p>
+              <pre class="pre-box">
+PORT=5000
+NODE_ENV=development
+
+# Database connection parameters (Docker container defaults)
+DB_HOST=db
+DB_PORT=3306
+DB_USER=avnadmin
+DB_PASSWORD=your-secure-password
+DB_NAME=vinecity_db
+
+# JWT Token security configurations
+JWT_SECRET="generate-a-long-random-alphanumeric-string-for-access-tokens"
+JWT_EXPIRES_IN=7d
+
+# Gmail SMTP Configuration (Requires Gmail App Password)
+GMAIL_USER=example@gmail.com
+GMAIL_APP_PASSWORD=xxxx-xxxx-xxxx-xxxx
+
+# Unified Resend Email Delivery Api Key 
+RESEND_API_KEY="re_xxxxx"
+RESEND_FROM_EMAIL="onboarding@resend.dev"
+
+# AES-256 Encryption key for sensitive profile data (exactly 32 characters)
+ENCRYPTION_KEY="Q8mR2Zp7LxA9VdK5S4WcFJYB3N6EHT0UeM1"
+
+# Base URL used in password-less setup links sent to staff/directors
+ACCOUNT_SETUP_BASE_URL="http://localhost:5173"
+
+# Comma-separated list of allowed CORS origins
+CORS_ORIGINS="http://localhost:3001,http://localhost:3000,http://vinecity.primustech.africa"
+              </pre>
+
+              <h4 class="mt-4">Database Initialization &amp; Seed</h4>
+              <ol>
+                <li><strong>Install Dependencies:</strong>
+                  <pre style="background: #282a36; color: #f8f8f2; padding: 5px 10px; border-radius: 4px; font-family: monospace; font-size: 0.85rem;">npm install</pre>
+                </li>
+                <li><strong>Run Migrations:</strong>
+                  <pre style="background: #282a36; color: #f8f8f2; padding: 5px 10px; border-radius: 4px; font-family: monospace; font-size: 0.85rem;">npm run db:migrate</pre>
+                </li>
+                <li><strong>Verify Database Structure:</strong>
+                  <pre style="background: #282a36; color: #f8f8f2; padding: 5px 10px; border-radius: 4px; font-family: monospace; font-size: 0.85rem;">npx tsx verify-db.ts</pre>
+                </li>
+              </ol>
+
+              <h4 class="mt-4">Running the Server</h4>
+              <p><strong>Development Environment (With Watcher):</strong></p>
+              <pre class="pre-box">npm run dev</pre>
+              <p><strong>Production Build (Compiles to JS):</strong></p>
+              <pre class="pre-box">
+# Transpile source to JS
+npm run build
+
+# Execute production bundle
+npm run start
+              </pre>
+
+              <h4 class="mt-4">Server Startup Verification URLs</h4>
+              <table class="table tech-table">
+                <thead>
+                  <tr>
+                    <th>Feature</th>
+                    <th>URL</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>REST API Port</td><td><a href="http://localhost:5000">http://localhost:5000</a></td></tr>
+                  <tr><td>Swagger Docs</td><td><a href="http://localhost:5000/api-docs">http://localhost:5000/api-docs</a></td></tr>
+                  <tr><td>Health Check</td><td><a href="http://localhost:5000/api/health">http://localhost:5000/api/health</a></td></tr>
+                </tbody>
+              </table>
+
+              <hr>
+
+              <!-- Deployment -->
+              <h2 id="deployment--vps-optimization" class="mt-5 mb-3">VPS &amp; Docker Deployment Optimization</h2>
+              <p>This backend is optimized for containerized deployment using <strong>Docker Compose</strong> to package and run both the Express API container and the MariaDB SQL database container in tandem.</p>
+
+              <div class="alert-box" style="border-left-color: #cca43b; background: #fffdf5;">
+                <div class="alert-box-title" style="color: #926d17;">⚠️ Critical Gotcha regarding local TSC execution:</div>
+                <p>If you run the raw typescript compiler <code>tsc</code> locally, it compiles <code>.js</code>, <code>.js.map</code>, and <code>.d.ts</code> files directly next to your <code>.ts</code> files inside <code>/src</code>.</p>
+                <p>Node.js prioritizes existing compiled <code>.js</code> files in <code>/src</code> over the updated <code>.ts</code> source, causing VPS containers or production environments to serve outdated API behavior even after you make updates to your TS files.</p>
+              </div>
+
+              <h5>The Prevention Fix:</h5>
+              <p>If you experience outdated responses on VPS or Docker runs:</p>
+              <ol>
+                <li><strong>Purge all local build outputs within <code>/src</code>:</strong>
+                  <ul>
+                    <li>PowerShell: <br><code>Get-ChildItem -Path src -Recurse -Include "*.js","*.js.map","*.d.ts","*.d.ts.map" | Remove-Item -Force</code></li>
+                    <li>Unix Shell: <br><code>find src -type f \( -name "*.js" -o -name "*.js.map" -o -name "*.d.ts" -o -name "*.d.ts.map" \) -delete</code></li>
+                  </ul>
+                </li>
+                <li>Ensure you have <code>"outDir": "./dist"</code> configured in <code>tsconfig.json</code>.</li>
+                <li>Re-run the build container to trigger a clean TypeScript compilation.</li>
+              </ol>
+
+              <hr>
+
+              <!-- Quick Test Guide -->
+              <h2 id="quick-test-guide" class="mt-5 mb-3">Quick Test Guide</h2>
+              
+              <h5 class="mt-4">Step 1: Authenticate as Admin</h5>
+              <pre class="pre-box">
+curl -X POST http://localhost:5000/api/auth/login \
+  -H "Content-Type: application/json" \
+  -d '{"email":"admin@example.com","password":"AdminPass123"}'
+              </pre>
+
+              <h5 class="mt-4">Step 2: Create Phase &amp; Stand</h5>
+              <pre class="pre-box">
+# 1. Create a development Phase
+curl -X POST http://localhost:5000/api/phases \
+  -H "Authorization: Bearer ADMIN_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{"name":"Vineyard Estate Phase 1","code":"VE-P1","description":"Sleek standard land units in northern Vineyard area"}'
+
+# 2. Add a stand to Phase 1
+curl -X POST http://localhost:5000/api/stands \
+  -H "Authorization: Bearer ADMIN_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{"stand_number":"V-101","size":"600m²","price":12000.00,"phase_id":1}'
+              </pre>
+
+              <h5 class="mt-4">Step 3: Register Owner &amp; Finalize Allocation</h5>
+              <pre class="pre-box">
+# 1. Register a new buyer/owner
+curl -X POST http://localhost:5000/api/owners \
+  -H "Authorization: Bearer ADMIN_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{"full_name":"Belinda Musariri","phone_number":"+263773123456","email":"belinda@example.com","national_id_number":"12-345678A90","date_of_birth":"1988-06-12","gender":"female","address":"88 Westgate Dr, Harare"}'
+
+# 2. Allocate the stand to the owner (Spawns a 12-month payment contract & portal credentials)
+curl -X POST http://localhost:5000/api/allocations \
+  -H "Authorization: Bearer ADMIN_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "stand_id": 1,
+    "owner_id": 1,
+    "payment_plan": {
+      "total_amount": 12000.00,
+      "payment_type": "INSTALLMENT",
+      "installment_count": 12,
+      "installment_amount": 1000.00,
+      "start_date": "2026-06-01"
+    },
+    "next_of_kin": ["Charles Musariri"],
+    "beneficiaries": ["Faith Musariri"],
+    "username": "belinda_ve101",
+    "password": "SecurePassword123"
+  }'
+              </pre>
+
+              <h5 class="mt-4">Step 4: Record Payments in Ledger</h5>
+              <pre class="pre-box">
+curl -X POST http://localhost:5000/api/allocations/payments/1/pay \
+  -H "Authorization: Bearer ADMIN_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{"amount":2000.00,"method":"ECOCASH","reference":"PP-ECO-9948","paid_at":"2026-06-02T10:00:00.000Z"}'
+              </pre>
+
             </div>
           </div>
 
