@@ -1145,6 +1145,30 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
+  <!-- Custom Skills Hub Toggle Script -->
+  <script>
+    function toggleSkillsHub() {
+      const skillsHub = document.getElementById('detailed-skills-hub');
+      const toggleBtn = document.getElementById('toggle-skills-btn');
+      const btnText = toggleBtn.querySelector('.btn-text');
+      
+      if (skillsHub.classList.contains('show')) {
+        skillsHub.classList.remove('show');
+        toggleBtn.classList.remove('active');
+        btnText.textContent = 'View Detailed Tech Stack & Interests';
+        
+        // Scroll back to the button smoothly so the user doesn't get lost
+        setTimeout(() => {
+          toggleBtn.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 300);
+      } else {
+        skillsHub.classList.add('show');
+        toggleBtn.classList.add('active');
+        btnText.textContent = 'Hide Detailed Tech Stack';
+      }
+    }
+  </script>
+
 </body>
 
 
