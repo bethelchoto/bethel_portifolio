@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>EventPlanner API Backend – Bethel Panashe Choto</title>
+  <meta name="description" content="EventPlanner API Backend – A production-ready, highly modular monolith backend built with TypeScript 6, Node.js, Express 5, Prisma ORM, and Socket.io.">
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com/" rel="preconnect">
+  <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    .pre-box {
+      background: #1e1e2e;
+      color: #cdd6f4;
+      padding: 15px;
+      border-radius: 8px;
+      font-family: 'Fira Code', monospace;
+      font-size: 0.85rem;
+      overflow-x: auto;
+      border: 1px solid #313244;
+      margin-bottom: 20px;
+    }
+    .tech-table th {
+      background-color: #313244 !important;
+      color: #ffffff !important;
+    }
+    .tech-table td, .tech-table th {
+      border: 1px solid #45475a;
+    }
+    .service-card {
+      background: #f8f9fa;
+      border-left: 4px solid #fd5c63;
+      border-radius: 0 8px 8px 0;
+      padding: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .endpoint-badge {
+      font-size: 0.75rem;
+      font-weight: bold;
+      padding: 3px 6px;
+      border-radius: 4px;
+      margin-right: 8px;
+    }
+    .badge-post { background-color: #49cc90; color: white; }
+    .badge-get { background-color: #61affe; color: white; }
+    .badge-put { background-color: #fca130; color: white; }
+    .badge-delete { background-color: #f93e3e; color: white; }
+    .badge-patch { background-color: #50e3c2; color: white; }
+    
+    .alert-box {
+      border-left: 4px solid #ffc107;
+      background: #fffbeb;
+      padding: 15px;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 20px;
+    }
+    .alert-box-title {
+      font-weight: bold;
+      color: #b7791f;
+      margin-bottom: 5px;
+    }
+    
+    .mermaid-box {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body class="portfolio-details-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a class='logo d-flex align-items-center' href='index.html'>
+        <h1 class="sitename">Bethel Panashe Choto</h1>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href='index.html'>Home</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="page-title" data-aos="fade">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">Portfolio Details</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href='index.html'>Home</a></li>
+            <li class="current">EventPlanner API Backend</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <section id="portfolio-details" class="portfolio-details section">
+      <div class="container" data-aos="fade-up">
+
+        <!-- Portfolio Image Slides -->
+        <div class="portfolio-details-slider swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {"loop":true,"speed":600,"autoplay":{"delay":5000},"slidesPerView":"auto","navigation":{"nextEl":".swiper-button-next","prevEl":".swiper-button-prev"},"pagination":{"el":".swiper-pagination","type":"bullets","clickable":true}}
+          </script>
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide">
+              <img src="assets/img/portfolio/eventplanning/eventplanner logo.png" alt="EventPlanner Logo">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/portfolio/eventplanning/WhatsApp Image 2026-04-20 at 07.46.51.jpeg" alt="EventPlanner Ecosystem Dashboard">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/portfolio/eventplanning/WhatsApp Image 2026-04-22 at 14.22.32.jpeg" alt="EventPlanner Chat Interface">
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="row justify-content-between gy-4 mt-4">
+          <div class="col-lg-8" data-aos="fade-up">
+            <div class="portfolio-description">
+              <h1 class="mb-3">🎈 EventPlanner API Backend</h1>
+              <p class="lead"><strong>A production-ready, highly modular monolith backend for the EventPlanner ecosystem — SaaS Marketplace for event planning, booking, and real-time vendor collaboration.</strong></p>
+              <p>Built with <strong>TypeScript 6</strong>, <strong>Node.js</strong>, <strong>Express 5</strong>, <strong>Prisma ORM</strong> (custom MariaDB adapter), <strong>Socket.io</strong> (WebSockets), <strong>Vercel Blob</strong> for media assets, and <strong>Nodemailer</strong> for secure transactional email dispatching. Deployed serverless on <strong>Vercel</strong> with full self-hosted raw HTTP fallback support for real-time WebSocket state synchronisation.</p>
+
+              <hr>
+
+              <!-- Table of Contents -->
+              <h3 class="mt-4">Table of Contents</h3>
+              <ul>
+                <li><a href="#system-architecture">System Architecture</a></li>
+                <li><a href="#technology-stack">Technology Stack</a></li>
+                <li><a href="#domain-model--features-overview">Domain Model &amp; Features Overview</a></li>
+                <li><a href="#database-architecture--schema">Database Architecture &amp; Schema</a></li>
+                <li><a href="#real-time-messaging-flow">Real-Time Messaging Flow</a></li>
+                <li><a href="#event--task-state-machines">Event &amp; Task State Machines</a></li>
+                <li><a href="#api-reference">API Reference</a></li>
+                <li><a href="#getting-started">Getting Started</a></li>
+                <li><a href="#deployment--vercel-optimization">Deployment &amp; Vercel Optimization</a></li>
+                <li><a href="#quick-test-guide">Quick Test Guide</a></li>
+              </ul>
+
+              <hr>
+
+              <!-- System Architecture -->
+              <h2 id="system-architecture" class="mt-5 mb-3">System Architecture</h2>
+              <pre class="pre-box">
+                                      ┌──────────────────────┐
+                                      │    Client Clients    │
+                                      │  (Web App / Flutter) │
+                                      └──────────┬───────────┘
+                                                 │
+                                                 │ HTTPS / WSS (Port 5000)
+                                                 ▼
+                                ┌──────────────────────────────────┐
+                                │       Express API Gateway        │
+                                │   ┌──────────────────────────┐   │
+                                │   │ Helmet Secure Headers    │   │
+                                │   │ CORS Cross-Origin Policy │   │
+                                │   │ Auth Verification Filter │   │
+                                │   │ Swagger UI API Docs      │   │
+                                │   └─────────────┬────────────┘   │
+                                └─────────────────┼────────────────┘
+                                                  │
+                ┌─────────────────────────────────┼────────────────────────────────┐
+                ▼                                 ▼                                ▼
+     ┌─────────────────────┐           ┌─────────────────────┐          ┌─────────────────────┐
+     │    Auth & Users     │           │Vendors & Bookings   │          │  Events & Budgets   │
+     │ ┌─────────────────┐ │           │ ┌─────────────────┐ │          │ ┌─────────────────┐ │
+     │ │ OTP Verification│ │           │ │ Multi-Filter    │ │          │ │ Budget Limit    │ │
+     │ │ JWT Issuance    │ │           │ │ Date Locks      │ │          │ │ Expense Logs    │ │
+     │ └─────────────────┘ │           │ └─────────────────┘ │          │ └─────────────────┘ │
+     └──────────┬──────────┘           └──────────┬──────────┘          └──────────┬──────────┘
+                │                                 │                                │
+                └─────────────────────────────────┼────────────────────────────────┘
+                                                  │
+                                                  ▼
+                                ┌──────────────────────────────────┐
+                                │           Prisma Client          │
+                                │    (MariaDB Connection Pool)     │
+                                └─────────────────┬────────────────┘
+                                                  │
+                                                  ▼
+                                ┌──────────────────────────────────┐
+                                │     Aiven Cloud MariaDB Database │
+                                │            (Port 10850)          │
+                                └──────────────────────────────────┘
+
+                                    [ Real-Time & Cloud Assets ]
+                                                 │
+                  ┌──────────────────────────────┼──────────────────────────────┐
+                  ▼                              ▼                              ▼
+       ┌────────────────────┐         ┌────────────────────┐         ┌────────────────────┐
+       │   Socket.IO Room   │         │    Vercel Blob     │         │     SMTP Relay     │
+       │    (WSS server)    │         │ (Multer Multipart) │         │ (Nodemailer Gmail) │
+       │  Typing / Messages │         │  Asset Hosting     │         │ OTP / Alerts       │
+       └────────────────────┘         └────────────────────┘         └────────────────────┘
+              </pre>
+
+              <h4 class="mt-4">Communication Architecture Patterns</h4>
+              <table class="table tech-table">
+                <thead>
+                  <tr>
+                    <th>Interface</th>
+                    <th>Paradigm</th>
+                    <th>Transport</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>REST API</strong></td>
+                    <td>Synchronous RESTful</td>
+                    <td>HTTP/S</td>
+                    <td>Core CRUD operations, authentication, profile configuration, budget tracking, transaction processing.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Real-time Chat</strong></td>
+                    <td>Asynchronous Duplex</td>
+                    <td>WebSocket (Socket.io)</td>
+                    <td>Low-latency client-vendor chats, real-time typing indicators, read status updates.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Asset Storage</strong></td>
+                    <td>Multiplex stream</td>
+                    <td>Multipart POST</td>
+                    <td>Vercel Blob file uploading backed by a local <code>multer</code> memory cache layer.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Mail Dispatch</strong></td>
+                    <td>Queue-less push</td>
+                    <td>SMTP Relay</td>
+                    <td>Transactional alerts and OTP registration verifications pushed via Nodemailer secure SSL.</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <hr>
+
+              <!-- Technology Stack -->
+              <h2 id="technology-stack" class="mt-5 mb-3">Technology Stack</h2>
+              <table class="table tech-table">
+                <thead>
+                  <tr>
+                    <th>Layer</th>
+                    <th>Dependency</th>
+                    <th>Version</th>
+                    <th>Purpose</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><strong>Runtime &amp; Core</strong></td><td>Node.js / TypeScript</td><td>^25.0 / ^6.0</td><td>Modern ESM execution environment</td></tr>
+                  <tr><td><strong>Framework</strong></td><td>Express</td><td>^5.2.1</td><td>Fast, unopinionated minimalist web framework</td></tr>
+                  <tr><td><strong>Database ORM</strong></td><td>Prisma</td><td>^7.7.0</td><td>Type-safe declarative database client and schema builder</td></tr>
+                  <tr><td><strong>DB Adapter</strong></td><td>@prisma/adapter-mariadb</td><td>^7.7.0</td><td>High-performance raw driver mapping for MariaDB</td></tr>
+                  <tr><td><strong>Real-time Server</strong></td><td>Socket.io</td><td>^4.8.3</td><td>Connection multiplexer for WebSockets with fallback options</td></tr>
+                  <tr><td><strong>Database Engine</strong></td><td>MariaDB</td><td>^3.5.2</td><td>Cloud-hosted open-source relational SQL database</td></tr>
+                  <tr><td><strong>Security Layer</strong></td><td>Helmet &amp; CORS</td><td>^8.1.0 / ^2.8.6</td><td>HTTP headers protection and Cross-Origin request rules</td></tr>
+                  <tr><td><strong>Auth Tokens</strong></td><td>jsonwebtoken / bcryptjs</td><td>^9.0.3 / ^3.0.3</td><td>Secure state-free JWT tokens &amp; salt-based password hashing</td></tr>
+                  <tr><td><strong>Media Host</strong></td><td>@vercel/blob / Multer</td><td>^2.3.3 / ^2.1.1</td><td>Direct cloud file-blob uploads with multipart handler</td></tr>
+                  <tr><td><strong>Emailer Engine</strong></td><td>Nodemailer</td><td>^8.0.5</td><td>Secure SMTP Gmail transport driver</td></tr>
+                  <tr><td><strong>API Blueprint</strong></td><td>Swagger UI Express</td><td>^5.0.1</td><td>Autogenerated, interactive Swagger documentation</td></tr>
+                  <tr><td><strong>Local Watcher</strong></td><td>TSX / Dotenv</td><td>^4.21.0 / ^17.4.2</td><td>Real-time transpiling loader &amp; <code>.env</code> configuration injector</td></tr>
+                </tbody>
+              </table>
+
+              <hr>
+
+              <!-- Domain Model & Features Overview -->
+              <h2 id="domain-model--features-overview" class="mt-5 mb-3">Domain Model &amp; Features Overview</h2>
+              <p>The platform uses a feature-based modular directory design (<code>/src/features</code>) to ensure high cohesion and maintainable separation of concerns:</p>
+
+              <div class="service-card">
+                <h5>👤 1. Authentication &amp; User Accounts</h5>
+                <ul>
+                  <li><strong>Stateless Session Security:</strong> Employs cryptographically signed <strong>JSON Web Tokens (JWT)</strong> for access controls.</li>
+                  <li><strong>Two-Step Email Activation:</strong> Standard registration dispatches a secure 6-digit verification OTP through SMTP to mark accounts as active.</li>
+                  <li><strong>Role-Based Access Control (RBAC):</strong> Restricts secure routes based on user type (<code>USER</code>, <code>VENDOR</code>, <code>ADMIN</code>).</li>
+                </ul>
+              </div>
+
+              <div class="service-card">
+                <h5>🎪 2. Event Planning</h5>
+                <ul>
+                  <li><strong>Unified Planner Dashboard:</strong> Planners can build custom events, set strict date limits, define overall budgets, and display custom cover flyers.</li>
+                  <li><strong>Aggregated Analytics:</strong> Auto-gathers and updates the event's booking commitments, budget limits, actual expenditures, and remaining capital.</li>
+                </ul>
+              </div>
+
+              <div class="service-card">
+                <h5>💼 3. Vendor Profiles Marketplace</h5>
+                <ul>
+                  <li><strong>Category Taxonomy:</strong> Profiles are strictly cataloged by service specialties (<code>CATERING</code>, <code>VENUE</code>, <code>PHOTOGRAPHY</code>, etc.).</li>
+                  <li><strong>Rich JSON Attributes:</strong> Houses flexible structure models for pricing tiers and calendar availability models.</li>
+                  <li><strong>Discovery Filters:</strong> Advanced query parameters mapping keywords, location boundaries, service pricing tiers, and rating scales.</li>
+                </ul>
+              </div>
+
+              <div class="service-card">
+                <h5>📅 4. Booking Scheduler</h5>
+                <ul>
+                  <li><strong>Strict Date Locks:</strong> Utilizes database-enforced unique constraints (<code>[vendorProfileId, eventDate]</code>) to completely eliminate dual-booking vulnerabilities.</li>
+                  <li><strong>Lifecycle Engine:</strong> Progresses reservations through strict, audited stages from request inception to paid confirmation.</li>
+                </ul>
+              </div>
+
+              <div class="service-card">
+                <h5>💰 5. Event Budget &amp; Expenses</h5>
+                <ul>
+                  <li><strong>Sub-Event Cost Logger:</strong> Planners log dynamic bills, categorize charges, and connect expenses directly to approved vendor bookings.</li>
+                  <li><strong>Visual Progress Metrics:</strong> Evaluates allocated event budget against real aggregated costs to guard against overspending.</li>
+                </ul>
+              </div>
+
+              <div class="service-card">
+                <h5>📝 6. Task Management</h5>
+                <ul>
+                  <li><strong>Interactive Event Checklist:</strong> Tracks specific, deadline-bound todo tasks linked to parent events.</li>
+                  <li><strong>Activity Metrics:</strong> Generates real-time statistics covering completed tasks, progress ratios, and pending deadlines.</li>
+                </ul>
+              </div>
+
+              <div class="service-card">
+                <h5>💬 7. Real-Time Chat System</h5>
+                <ul>
+                  <li><strong>State-Synchronized Messaging:</strong> Implements secure Socket.io channels to broker live communication between event planners and vendors.</li>
+                  <li><strong>Chat Enhancements:</strong> Supports live typing signals, unread counter badges, and immediate message persistence.</li>
+                </ul>
+              </div>
+
+              <div class="service-card">
+                <h5>🔔 8. Instant Notifications</h5>
+                <ul>
+                  <li><strong>Status Sync Engine:</strong> Broadcasts instant real-time websocket and database-persisted notifications for actions (e.g., vendor bookings, inbox messages).</li>
+                </ul>
+              </div>
+
+              <div class="service-card">
+                <h5>💳 9. Transaction Processing &amp; Subscriptions</h5>
+                <ul>
+                  <li><strong>Commission Splitter:</strong> Stub models tracking custom commission fees per booking.</li>
+                  <li><strong>Stripe Transaction Register:</strong> Processes secure booking transactions and handles premium subscriptions for vendors.</li>
+                </ul>
+              </div>
+
+              <div class="service-card">
+                <h5>⭐ 10. Reviews &amp; Ratings</h5>
+                <ul>
+                  <li><strong>Aesthetic Scoreboards:</strong> Users write star ratings and written testimonials for approved vendors.</li>
+                  <li><strong>Dynamic Average Rating:</strong> Recalculates and aggregates overall vendor ratings automatically.</li>
+                </ul>
+              </div>
+
+              <hr>
+
+              <!-- Database Architecture -->
+              <h2 id="database-architecture--schema" class="mt-5 mb-3">Database Architecture &amp; Schema</h2>
+              <div class="mermaid-box">
+                <pre style="font-family: 'Fira Code', monospace; font-size: 0.85rem; margin: 0;">
+  Entity-Relationship Diagram
+  ===========================
+  
+  users ||--o| vendor_profiles : "has profile"
+  users ||--o{ bookings : "makes"
+  users ||--o{ events : "owns"
+  users ||--o{ notifications : "receives"
+  users ||--o{ payments : "makes"
+  users ||--o{ reviews : "writes"
+  users ||--o{ conversations : "participates"
+  users ||--o{ messages : "sends"
+  
+  vendor_profiles ||--o{ bookings : "receives"
+  vendor_profiles ||--o{ reviews : "reviewed by"
+  vendor_profiles ||--o| subscriptions : "subscribes to"
+  vendor_profiles ||--o{ payments : "receives"
+  
+  bookings ||--o{ payments : "has"
+  bookings ||--o| expenses : "generates"
+  
+  events ||--o{ bookings : "includes"
+  events ||--o{ expenses : "contains"
+  events ||--o{ tasks : "has"
+  
+  conversations ||--o{ messages : "contains"
+                </pre>
+              </div>
+
+              <h4 class="mt-4">Core Enumerated Types</h4>
+              <pre class="pre-box">
+Role:              USER | VENDOR | ADMIN
+VendorCategory:    CATERING | VENUE | PHOTOGRAPHY | VIDEOGRAPHY | MUSIC | DECORATION | FLORIST | PLANNER | OTHER
+BookingStatus:     PENDING | AWAITING_PAYMENT | CONFIRMED | CANCELLED
+TaskStatus:        TODO | IN_PROGRESS | COMPLETED
+NotificationType:  NEW_MESSAGE | BOOKING_ACCEPTED | BOOKING_CONFIRMED | BOOKING_CANCELLED | BOOKING_PENDING | GENERAL
+TransactionType:   BOOKING_PAYMENT | COMMISSION | VENDOR_SUBSCRIPTION
+TransactionStatus: PENDING | COMPLETED | FAILED | REFUNDED
+              </pre>
+
+              <hr>
+
+              <!-- Real-Time Messaging Flow -->
+              <h2 id="real-time-messaging-flow" class="mt-5 mb-3">Real-Time Messaging Flow</h2>
+              <pre class="pre-box">
+ Planners (Client A)            Socket.IO Server            Vendors (Client B)
+         │                              │                            │
+         │─── joinConversation ────────►│                            │
+         │    (Room Subscription)       │                            │
+         │                              │◄─── joinConversation ──────│
+         │    (Room Subscription)       │                            │
+         │                              │                            │
+         │─── typing ──────────────────►│                            │
+         │                              │─── userTyping ────────────►│
+         │                              │                            │
+         │─── sendMessage ─────────────►│                            │
+         │    (Write to MariaDB)        │                            │
+         │                              │─── newMessage ────────────►│
+         │                              │    (Real-Time Broadcast)   │
+         │                              │                            │
+         │                              │─── createNotification ────►│
+         │                              │    (Dispatch in-app alert) │
+         │                              │                            │
+         │◄─── messagesRead ────────────│◄─── markRead ──────────────│
+         │    (Real-Time UI Update)     │    (Update Message Flags)  │
+              </pre>
+
+              <hr>
+
+              <!-- Event & Task State Machines -->
+              <h2 id="event--task-state-machines" class="mt-5 mb-3">Event &amp; Task State Machines</h2>
+              
+              <h4 class="mt-4">Booking Scheduling Lifecycle</h4>
+              <pre class="pre-box">
+             ┌───────────────┐
+             │    PENDING    │
+             └───────┬───────┘
+                     │ Vendor Accepts / Invoice Generated
+                     ▼
+             ┌───────────────┐
+             │AWAITING_PAYMENT│
+             └───────┬───────┘
+                     │                   
+         ┌───────────┴───────────┐
+         │ Payment Cleared       │ Customer / Vendor Cancels
+         ▼                       ▼
+ ┌───────────────┐       ┌───────────────┐
+ │   CONFIRMED   │       │   CANCELLED   │
+ └───────────────┘       └───────────────┘
+              </pre>
+
+              <h4 class="mt-4">Checklist Task Lifecycle</h4>
+              <pre class="pre-box">
+  ┌──────────────┐       Task Started      ┌───────────────┐
+  │     TODO     ├────────────────────────►│  IN_PROGRESS  │
+  └──────┬───────┘                         └───────┬───────┘
+         │                                         │
+         │              Task Finished              │
+         └───────────────┬─────────────────────────┘
+                         ▼
+                 ┌───────────────┐
+                 │   COMPLETED   │
+                 └───────────────┘
+              </pre>
+
+              <hr>
+
+              <!-- API Reference -->
+              <h2 id="api-reference" class="mt-5 mb-3">API Reference</h2>
+              <p>All backend requests require authentication headers unless marked public: <br><code>Authorization: Bearer &lt;jwt-token&gt;</code></p>
+
+              <h4 class="mt-4">Authentication — <code>/api/auth</code></h4>
+              <table class="table tech-table">
+                <thead>
+                  <tr>
+                    <th>Method</th>
+                    <th>Endpoint</th>
+                    <th>Auth</th>
+                    <th>Payload Schema</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><span class="endpoint-badge badge-post">POST</span></td><td><code>/register</code></td><td>Public</td><td><code>{ email, password, name, role, phoneNumber }</code></td><td>Register profile, triggers verification email.</td></tr>
+                  <tr><td><span class="endpoint-badge badge-post">POST</span></td><td><code>/verify-email</code></td><td>Public</td><td><code>{ email, code }</code></td><td>Verifies account using 6-digit OTP code.</td></tr>
+                  <tr><td><span class="endpoint-badge badge-post">POST</span></td><td><code>/login</code></td><td>Public</td><td><code>{ email, password }</code></td><td>Authenticates user; returns dynamic JWT.</td></tr>
+                </tbody>
+              </table>
+
+              <h4 class="mt-4">Vendor Management — <code>/api/vendors</code></h4>
+              <table class="table tech-table">
+                <thead>
+                  <tr>
+                    <th>Method</th>
+                    <th>Endpoint</th>
+                    <th>Auth</th>
+                    <th>Query / Parameters</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><span class="endpoint-badge badge-get">GET</span></td><td><code>/</code></td><td>Public</td><td><code>?keyword=&amp;category=&amp;address=&amp;minPrice=&amp;maxPrice=&amp;minRating=</code></td><td>Multi-filter vendor search.</td></tr>
+                  <tr><td><span class="endpoint-badge badge-get">GET</span></td><td><code>/:id/details</code></td><td>Public</td><td>Path: <code>id</code> (Vendor ID)</td><td>Complete profile overview with reviews.</td></tr>
+                  <tr><td><span class="endpoint-badge badge-get">GET</span></td><td><code>/profile/:id</code></td><td>Public</td><td>Path: <code>id</code> (Profile UUID)</td><td>Fetch profile summary by its unique key.</td></tr>
+                  <tr><td><span class="endpoint-badge badge-get">GET</span></td><td><code>/me</code></td><td><code>VENDOR</code></td><td>None</td><td>Vendor fetches their own dashboard profile.</td></tr>
+                  <tr><td><span class="endpoint-badge badge-post">POST</span></td><td><code>/profile</code></td><td><code>VENDOR</code></td><td><code>{ businessName, description, category, pricing, availability, address, phone, website }</code></td><td>Create vendor workspace profile.</td></tr>
+                  <tr><td><span class="endpoint-badge badge-put">PUT</span></td><td><code>/profile</code></td><td><code>VENDOR</code></td><td><code>{ businessName, description, category, pricing, availability, address, phone, website }</code></td><td>Update vendor workspace details.</td></tr>
+                </tbody>
+              </table>
+
+              <h4 class="mt-4">Booking System — <code>/api/bookings</code></h4>
+              <table class="table tech-table">
+                <thead>
+                  <tr>
+                    <th>Method</th>
+                    <th>Endpoint</th>
+                    <th>Auth</th>
+                    <th>Payload / Query</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><span class="endpoint-badge badge-post">POST</span></td><td><code>/</code></td><td><code>USER</code></td><td><code>{ vendorProfileId, eventDate, totalAmount, notes, eventId }</code></td><td>Requests a new booking (Unique lock on date).</td></tr>
+                  <tr><td><span class="endpoint-badge badge-get">GET</span></td><td><code>/</code></td><td>Authenticated</td><td><code>?role=</code> (<code>USER</code> / <code>VENDOR</code>)</td><td>Lists all current logged-in bookings.</td></tr>
+                  <tr><td><span class="endpoint-badge badge-get">GET</span></td><td><code>/:id</code></td><td>Authenticated</td><td>Path: <code>id</code> (Booking ID)</td><td>Detailed single booking invoice view.</td></tr>
+                  <tr><td><span class="endpoint-badge badge-patch">PATCH</span></td><td><code>/:id/status</code></td><td>Authenticated</td><td><code>{ status }</code> (<code>CONFIRMED</code> / <code>CANCELLED</code> / <code>AWAITING_PAYMENT</code>)</td><td>Transition booking lifecycle state.</td></tr>
+                </tbody>
+              </table>
+
+              <h4 class="mt-4">Event &amp; Budget Management — <code>/api/budget</code></h4>
+              <table class="table tech-table">
+                <thead>
+                  <tr>
+                    <th>Method</th>
+                    <th>Endpoint</th>
+                    <th>Auth</th>
+                    <th>Payload / Parameters</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><span class="endpoint-badge badge-post">POST</span></td><td><code>/events</code></td><td><code>USER</code></td><td><code>{ name, date, budget }</code></td><td>Creates target event container.</td></tr>
+                  <tr><td><span class="endpoint-badge badge-get">GET</span></td><td><code>/events</code></td><td><code>USER</code></td><td>None</td><td>Lists all user event planners.</td></tr>
+                  <tr><td><span class="endpoint-badge badge-get">GET</span></td><td><code>/events/:id/summary</code></td><td><code>USER</code></td><td>Path: <code>id</code> (Event ID)</td><td>Financial summary (Allocated vs Spent).</td></tr>
+                  <tr><td><span class="endpoint-badge badge-post">POST</span></td><td><code>/events/:id/expenses</code></td><td><code>USER</code></td><td><code>{ name, amount, category, bookingId }</code></td><td>Logs a custom sub-event expense line.</td></tr>
+                  <tr><td><span class="endpoint-badge badge-get">GET</span></td><td><code>/events/:id/expenses</code></td><td><code>USER</code></td><td>Path: <code>id</code> (Event ID)</td><td>Fetches complete itemized invoice ledger.</td></tr>
+                  <tr><td><span class="endpoint-badge badge-delete">DELETE</span></td><td><code>/expenses/:id</code></td><td><code>USER</code></td><td>Path: <code>id</code> (Expense ID)</td><td>Deletes expense; updates event aggregates.</td></tr>
+                </tbody>
+              </table>
+
+              <h4 class="mt-4">Task Management — <code>/api/tasks</code></h4>
+              <table class="table tech-table">
+                <thead>
+                  <tr>
+                    <th>Method</th>
+                    <th>Endpoint</th>
+                    <th>Auth</th>
+                    <th>Payload / Parameters</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><span class="endpoint-badge badge-get">GET</span></td><td><code>/</code></td><td><code>USER</code></td><td>None</td><td>Lists tasks across all user events.</td></tr>
+                  <tr><td><span class="endpoint-badge badge-post">POST</span></td><td><code>/events/:eventId</code></td><td><code>USER</code></td><td><code>{ title, description, deadline }</code></td><td>Adds checklist task to specific event.</td></tr>
+                  <tr><td><span class="endpoint-badge badge-get">GET</span></td><td><code>/events/:eventId</code></td><td><code>USER</code></td><td>Path: <code>eventId</code> (Event ID)</td><td>Lists event tasks ordered by deadline.</td></tr>
+                  <tr><td><span class="endpoint-badge badge-get">GET</span></td><td><code>/events/:eventId/summary</code></td><td><code>USER</code></td><td>Path: <code>eventId</code></td><td>Analytics: total, completed, % progress.</td></tr>
+                  <tr><td><span class="endpoint-badge badge-patch">PATCH</span></td><td><code>/:id</code></td><td><code>USER</code></td><td><code>{ title, description, deadline, status }</code></td><td>Modify task attributes and progress.</td></tr>
+                  <tr><td><span class="endpoint-badge badge-delete">DELETE</span></td><td><code>/:id</code></td><td><code>USER</code></td><td>Path: <code>id</code> (Task ID)</td><td>Deletes task from event checklist.</td></tr>
+                </tbody>
+              </table>
+
+              <h4 class="mt-4">Real-Time Messaging — <code>/api/messages</code></h4>
+              <table class="table tech-table">
+                <thead>
+                  <tr>
+                    <th>Method</th>
+                    <th>Endpoint</th>
+                    <th>Auth</th>
+                    <th>Payload Schema</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><span class="endpoint-badge badge-post">POST</span></td><td><code>/conversations</code></td><td>Authenticated</td><td><code>{ vendorProfileId }</code></td><td>Inits chat thread; returns room ID.</td></tr>
+                  <tr><td><span class="endpoint-badge badge-get">GET</span></td><td><code>/conversations</code></td><td>Authenticated</td><td>None</td><td>Lists inbox channels.</td></tr>
+                  <tr><td><span class="endpoint-badge badge-get">GET</span></td><td><code>/conversations/:id</code></td><td>Authenticated</td><td>Path: <code>id</code> (Conversation ID)</td><td>Paginated inbox message history.</td></tr>
+                  <tr><td><span class="endpoint-badge badge-post">POST</span></td><td><code>/conversations/:id/messages</code></td><td>Authenticated</td><td><code>{ content }</code></td><td>Standard REST fallback to send message.</td></tr>
+                  <tr><td><span class="endpoint-badge badge-patch">PATCH</span></td><td><code>/conversations/:id/read</code></td><td>Authenticated</td><td>Path: <code>id</code></td><td>Marks thread messages as read.</td></tr>
+                </tbody>
+              </table>
+
+              <h4 class="mt-4">Notifications — <code>/api/notifications</code></h4>
+              <table class="table tech-table">
+                <thead>
+                  <tr>
+                    <th>Method</th>
+                    <th>Endpoint</th>
+                    <th>Auth</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><span class="endpoint-badge badge-get">GET</span></td><td><code>/</code></td><td>Authenticated</td><td>Fetches paginated inbox alerts.</td></tr>
+                  <tr><td><span class="endpoint-badge badge-patch">PATCH</span></td><td><code>/read-all</code></td><td>Authenticated</td><td>Marks all pending notifications as read.</td></tr>
+                  <tr><td><span class="endpoint-badge badge-patch">PATCH</span></td><td><code>/:id/read</code></td><td>Authenticated</td><td>Marks a single notification as read.</td></tr>
+                  <tr><td><span class="endpoint-badge badge-delete">DELETE</span></td><td><code>/:id</code></td><td>Authenticated</td><td>Deletes notification.</td></tr>
+                </tbody>
+              </table>
+
+              <h4 class="mt-4">Payments — <code>/api/payments</code></h4>
+              <table class="table tech-table">
+                <thead>
+                  <tr>
+                    <th>Method</th>
+                    <th>Endpoint</th>
+                    <th>Auth</th>
+                    <th>Payload Schema</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><span class="endpoint-badge badge-post">POST</span></td><td><code>/user/booking/:bookingId</code></td><td><code>USER</code></td><td><code>{ gatewayRef }</code></td><td>Initialise and process invoice payment.</td></tr>
+                  <tr><td><span class="endpoint-badge badge-get">GET</span></td><td><code>/user/transactions</code></td><td><code>USER</code></td><td>None</td><td>Aggregated payment ledger.</td></tr>
+                  <tr><td><span class="endpoint-badge badge-get">GET</span></td><td><code>/vendor/transactions</code></td><td><code>VENDOR</code></td><td>None</td><td>Income transaction register.</td></tr>
+                  <tr><td><span class="endpoint-badge badge-post">POST</span></td><td><code>/vendor/subscribe</code></td><td><code>VENDOR</code></td><td><code>{ planName, amount, durationMonths }</code></td><td>Activates premium profile flags.</td></tr>
+                  <tr><td><span class="endpoint-badge badge-post">POST</span></td><td><code>/confirm/:transactionId</code></td><td>Public</td><td>None</td><td>Stripe webhook transaction confirmation.</td></tr>
+                </tbody>
+              </table>
+
+              <h4 class="mt-4">Reviews &amp; Ratings — <code>/api/reviews</code></h4>
+              <table class="table tech-table">
+                <thead>
+                  <tr>
+                    <th>Method</th>
+                    <th>Endpoint</th>
+                    <th>Auth</th>
+                    <th>Payload Schema</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><span class="endpoint-badge badge-get">GET</span></td><td><code>/vendor/:vendorId</code></td><td>Public</td><td>Path: <code>vendorId</code></td><td>Fetches all ratings for a vendor.</td></tr>
+                  <tr><td><span class="endpoint-badge badge-post">POST</span></td><td><code>/</code></td><td><code>USER</code></td><td><code>{ vendorProfileId, rating, comment }</code></td><td>Leaves score; triggers vendor aggregate update.</td></tr>
+                  <tr><td><span class="endpoint-badge badge-put">PUT</span></td><td><code>/:id</code></td><td><code>USER</code></td><td><code>{ rating, comment }</code></td><td>Updates score.</td></tr>
+                  <tr><td><span class="endpoint-badge badge-delete">DELETE</span></td><td><code>/:id</code></td><td><code>USER</code></td><td>Path: <code>id</code></td><td>Deletes review.</td></tr>
+                </tbody>
+              </table>
+
+              <h4 class="mt-4">Administration — <code>/api/admin</code></h4>
+              <table class="table tech-table">
+                <thead>
+                  <tr>
+                    <th>Method</th>
+                    <th>Endpoint</th>
+                    <th>Auth</th>
+                    <th>Query Parameters</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><span class="endpoint-badge badge-get">GET</span></td><td><code>/users</code></td><td><code>ADMIN</code></td><td>None</td><td>Displays registration lists.</td></tr>
+                  <tr><td><span class="endpoint-badge badge-get">GET</span></td><td><code>/vendors</code></td><td><code>ADMIN</code></td><td><code>?approved=</code> (<code>true</code> / <code>false</code>)</td><td>Filter pending registrations.</td></tr>
+                  <tr><td><span class="endpoint-badge badge-patch">PATCH</span></td><td><code>/vendors/:id/approve</code></td><td><code>ADMIN</code></td><td>Path: <code>id</code> (Vendor ID)</td><td>Approves profile; makes it search discoverable.</td></tr>
+                  <tr><td><span class="endpoint-badge badge-get">GET</span></td><td><code>/bookings</code></td><td><code>ADMIN</code></td><td>None</td><td>Tracks system transaction logs.</td></tr>
+                  <tr><td><span class="endpoint-badge badge-get">GET</span></td><td><code>/revenue</code></td><td><code>ADMIN</code></td><td>None</td><td>Gross revenue &amp; commission dashboard.</td></tr>
+                </tbody>
+              </table>
+
+              <h4 class="mt-4">Media Upload — <code>/api/media</code></h4>
+              <table class="table tech-table">
+                <thead>
+                  <tr>
+                    <th>Method</th>
+                    <th>Endpoint</th>
+                    <th>Auth</th>
+                    <th>Payload Schema</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><span class="endpoint-badge badge-post">POST</span></td><td><code>/upload</code></td><td>Authenticated</td><td>Multipart Key: <code>file</code></td><td>Multer catches asset → Streams directly to Vercel Blob. Returns public URL.</td></tr>
+                </tbody>
+              </table>
+
+              <hr>
+
+              <!-- Getting Started -->
+              <h2 id="getting-started" class="mt-5 mb-3">Getting Started</h2>
+              
+              <h4 class="mt-4">Prerequisites</h4>
+              <ul>
+                <li><strong>Node.js</strong> v22.x or v24.x (LTS)</li>
+                <li><strong>NPM</strong> v10.x+</li>
+                <li><strong>Prisma CLI</strong> (auto-configured in package dependencies)</li>
+                <li>Access to a <strong>MariaDB</strong> or <strong>MySQL</strong> server instance</li>
+              </ul>
+
+              <h4 class="mt-4">Environment Configuration</h4>
+              <p>Create a <code>.env</code> file in the root directory:</p>
+              <pre class="pre-box">
+PORT=5000
+NODE_ENV=development
+
+# Database connection parameters (MariaDB cloud instance)
+DB_HOST=your-mariadb-host.com
+DB_PORT=10850
+DB_USER=avnadmin
+DB_PASSWORD=your-secure-password
+DB_NAME=defaultdb
+
+# Unified Prisma connection string (SSL required for Aiven MariaDB instances)
+DATABASE_URL="mysql://avnadmin:your-secure-password@your-mariadb-host.com:10850/defaultdb?connect_timeout=30&pool_timeout=30&allowPublicKeyRetrieval=true&sslmode=required"
+
+# SMTP Configuration (Requires Gmail App Password)
+GMAIL_USER=example@gmail.com
+GMAIL_APP_PASSWORD=xxxx-xxxx-xxxx-xxxx
+
+# Direct Asset Storage Upload token (Vercel Blob)
+BLOB_READ_WRITE_TOKEN="vercel_blob_rw_xxxxx"
+
+# JSON Web Token Secret
+JWT_SECRET="generate-a-long-random-alphanumeric-string-for-access-tokens"
+              </pre>
+
+              <div class="alert-box">
+                <div class="alert-box-title">💡 Generating Gmail App Passwords:</div>
+                <p>Do NOT use your standard email password. Enable Two-Step Verification inside Google Settings, search <strong>App Passwords</strong>, generate a new app pass named <code>EventPlannerBackend</code>, and copy the resulting 16-character string into <code>GMAIL_APP_PASSWORD</code>.</p>
+              </div>
+
+              <h4 class="mt-4">Database Initialization</h4>
+              <ol>
+                <li><strong>Install Dependencies:</strong>
+                  <pre style="background: #282a36; color: #f8f8f2; padding: 5px 10px; border-radius: 4px; font-family: monospace; font-size: 0.85rem;">npm install</pre>
+                </li>
+                <li><strong>Generate Prisma Client:</strong>
+                  <pre style="background: #282a36; color: #f8f8f2; padding: 5px 10px; border-radius: 4px; font-family: monospace; font-size: 0.85rem;">npx prisma generate</pre>
+                </li>
+                <li><strong>Deploy Database Schema Structure:</strong>
+                  <pre style="background: #282a36; color: #f8f8f2; padding: 5px 10px; border-radius: 4px; font-family: monospace; font-size: 0.85rem;">npx prisma db push</pre>
+                </li>
+                <li><strong>Seed System Base Profiles:</strong>
+                  <pre style="background: #282a36; color: #f8f8f2; padding: 5px 10px; border-radius: 4px; font-family: monospace; font-size: 0.85rem;">npx prisma db seed</pre>
+                </li>
+              </ol>
+
+              <h4 class="mt-4">Running the Server</h4>
+              <p><strong>Development Environment (With Watcher):</strong></p>
+              <pre class="pre-box">npm run dev</pre>
+              <p><strong>Production Build (Compiles to JS):</strong></p>
+              <pre class="pre-box">
+# Transpile source to JS
+npm run build
+
+# Execute production bundle
+npm run start
+              </pre>
+
+              <h4 class="mt-4">Server Startup Verification URLs</h4>
+              <table class="table tech-table">
+                <thead>
+                  <tr>
+                    <th>Feature</th>
+                    <th>URL</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>REST API Port</td><td><a href="http://localhost:5000">http://localhost:5000</a></td></tr>
+                  <tr><td>Swagger Docs</td><td><a href="http://localhost:5000/api-docs">http://localhost:5000/api-docs</a></td></tr>
+                  <tr><td>Websocket Port</td><td><code>ws://localhost:5000</code></td></tr>
+                  <tr><td>Health Check</td><td><a href="http://localhost:5000/health">http://localhost:5000/health</a></td></tr>
+                  <tr><td>Version Sync</td><td><a href="http://localhost:5000/api/version">http://localhost:5000/api/version</a></td></tr>
+                </tbody>
+              </table>
+
+              <hr>
+
+              <!-- Deployment -->
+              <h2 id="deployment--vercel-optimization" class="mt-5 mb-3">Deployment &amp; Vercel Optimization</h2>
+              <p>This repository is optimized to deploy serverless on <strong>Vercel</strong> via <code>vercel.json</code>:</p>
+              <pre class="pre-box">
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "src/index.ts",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "src/index.ts"
+    }
+  ]
+}
+              </pre>
+
+              <div class="alert-box" style="border-left-color: #f93e3e; background: #fff5f5;">
+                <div class="alert-box-title" style="color: #c53030;">⚠️ Critical Gotcha regarding local TSC execution:</div>
+                <p>If you run the raw typescript compiler <code>tsc</code> locally, it compiles <code>.js</code>, <code>.js.map</code>, and <code>.d.ts</code> files directly next to your <code>.ts</code> files inside <code>/src</code>.</p>
+                <p>Due to ESM relative import rules (<code>import './controller.js'</code>), Node.js prioritizes existing compiled <code>.js</code> files in <code>/src</code> over the updated <code>.ts</code> source. As a result, Vercel will continue serving outdated API behavior even after you make updates to your TS files.</p>
+              </div>
+
+              <h5>The Prevention Fix:</h5>
+              <p>If you experience outdated responses on Vercel:</p>
+              <ol>
+                <li><strong>Purge all local build outputs within <code>/src</code>:</strong>
+                  <ul>
+                    <li>PowerShell: <br><code>Get-ChildItem -Path src -Recurse -Include "*.js","*.js.map","*.d.ts","*.d.ts.map" | Remove-Item -Force</code></li>
+                    <li>Unix Shell: <br><code>find src -type f \( -name "*.js" -o -name "*.js.map" -o -name "*.d.ts" -o -name "*.d.ts.map" \) -delete</code></li>
+                  </ul>
+                </li>
+                <li>Ensure you have <code>"outDir": "./dist"</code> configured in <code>tsconfig.json</code>.</li>
+                <li>Commit clean <code>/src</code> folders and push to trigger a fresh Vercel compilation.</li>
+              </ol>
+
+              <h5>Serverless vs WebSocket Support</h5>
+              <ul>
+                <li><strong>Websocket Limitation on Vercel:</strong> Vercel serverless execution modules do NOT support persistent TCP/WebSocket connections. When deployed on Vercel, the real-time chat features fallback gracefully.</li>
+                <li><strong>Dual Execution Mode:</strong> This backend is coded to detect serverless targets (<code>process.env.VERCEL === '1'</code>). If serverless mode is detected, Express functions normally via HTTP routes. For persistent server environments, raw HTTP is created dynamically to power fully active WSS connections at port <code>5000</code>.</li>
+              </ul>
+
+              <hr>
+
+              <!-- Quick Test Guide -->
+              <h2 id="quick-test-guide" class="mt-5 mb-3">Quick Test Guide</h2>
+              
+              <h5 class="mt-4">Step 1: Log in with the Seeded User</h5>
+              <p>Log in as the standard user profile seeded during DB setup: <br>Email: <code>userchots@eventplanner.com</code><br>Password: <code>1234567890</code></p>
+              <pre class="pre-box">
+curl -X POST http://localhost:5000/api/auth/login \
+  -H "Content-Type: application/json" \
+  -d '{"email":"userchots@eventplanner.com","password":"1234567890"}'
+              </pre>
+
+              <h5 class="mt-4">Step 2: Register a Vendor Profile</h5>
+              <p>Log in as the seeded vendor profile: <br>Email: <code>mwanawevhu@eventplanner.com</code><br>Password: <code>1234567890</code></p>
+              <pre class="pre-box">
+# 1. Log in as vendor
+VENDOR_TOKEN=$(curl -s -X POST http://localhost:5000/api/auth/login \
+  -H "Content-Type: application/json" \
+  -d '{"email":"mwanawevhu@eventplanner.com","password":"1234567890"}' | jq -r '.token')
+
+# 2. Create the vendor profile
+curl -X POST http://localhost:5000/api/vendors/profile \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $VENDOR_TOKEN" \
+  -d '{
+    "businessName": "MwanaWevhu Events",
+    "description": "Premium floral arrangement & coordination services",
+    "category": "PLANNER",
+    "pricing": {"baseFee": 500, "hourlyRate": 75},
+    "availability": {"days": ["MON", "WED", "FRI"], "slots": ["MORNING", "AFTERNOON"]},
+    "address": "12 Main St, Harare",
+    "phone": "+26377123456"
+  }'
+              </pre>
+
+              <h5 class="mt-4">Step 3: Approve the Vendor (Admin Action)</h5>
+              <p>Administrative accounts verify and approve listings: <br>Email: <code>admin@eventplanner.com</code><br>Password: <code>1234567890</code></p>
+              <pre class="pre-box">
+# 1. Log in as Admin
+ADMIN_TOKEN=$(curl -s -X POST http://localhost:5000/api/auth/login \
+  -H "Content-Type: application/json" \
+  -d '{"email":"admin@eventplanner.com","password":"1234567890"}' | jq -r '.token')
+
+# 2. Fetch the pending vendor list
+PENDING_VENDORS=$(curl -s http://localhost:5000/api/admin/vendors?approved=false \
+  -H "Authorization: Bearer $ADMIN_TOKEN")
+echo $PENDING_VENDORS
+
+# 3. Approve vendor by their user ID
+VENDOR_ID=$(echo $PENDING_VENDORS | jq -r '.[0].id')
+curl -X PATCH http://localhost:5000/api/admin/vendors/$VENDOR_ID/approve \
+  -H "Authorization: Bearer $ADMIN_TOKEN"
+              </pre>
+
+              <h5 class="mt-4">Step 4: Create an Event &amp; Book the Vendor</h5>
+              <pre class="pre-box">
+# 1. Create a dynamic Event container
+EVENT_RES=$(curl -s -X POST http://localhost:5000/api/budget/events \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $USER_TOKEN" \
+  -d '{"name": "Spectacular Autumn Gala", "date": "2026-10-15", "budget": 15000.00}')
+EVENT_ID=$(echo $EVENT_RES | jq -r '.id')
+
+# 2. Fetch public vendors
+VENDORS=$(curl -s http://localhost:5000/api/vendors?category=PLANNER)
+VENDOR_PROFILE_ID=$(echo $VENDORS | jq -r '.[0].id')
+
+# 3. Book the approved vendor
+curl -X POST http://localhost:5000/api/bookings \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $USER_TOKEN" \
+  -d "{
+    \"vendorProfileId\": \"$VENDOR_PROFILE_ID\",
+    \"eventDate\": \"2026-10-15T00:00:00.000Z\",
+    \"totalAmount\": 1200.00,
+    \"notes\": \"Secure the floral theme setup for main auditorium.\",
+    \"eventId\": \"$EVENT_ID\"
+  }"
+              </pre>
+
+              <h5 class="mt-4">Step 5: Test WebSockets Real-Time Messaging</h5>
+              <pre class="pre-box">
+import { io } from "socket.io-client";
+
+const socket = io("http://localhost:5000", {
+  auth: { token: "PASTE_YOUR_USER_BEARER_JWT_HERE" }
+});
+
+// Join target conversation
+socket.emit("joinConversation", { conversationId: "PASTE_CONVERSATION_UUID" });
+
+socket.on("joinedConversation", ({ conversationId }) => {
+  console.log(`Joined active chat room: ${conversationId}`);
+  socket.emit("typing", { conversationId });
+});
+
+// Listener for typing status
+socket.on("userTyping", ({ conversationId, userId }) => {
+  console.log(`User ${userId} is currently typing...`);
+});
+
+// Transmit chat message payload
+socket.emit("sendMessage", {
+  conversationId: "PASTE_CONVERSATION_UUID",
+  content: "Hi, I have successfully locked in our autumn booking. Can we review the color layouts?"
+});
+
+// Listener for incoming message broadcasts
+socket.on("newMessage", (msg) => {
+  console.log("New Message Received:", msg);
+});
+              </pre>
+
+            </div>
+          </div>
+
+          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong> Mobile &amp; Web API Backend</li>
+                <li><strong>Client</strong> EventPlanner Ecosystem</li>
+                <li><strong>Role</strong> Lead Backend Software Engineer</li>
+                <li><strong>Project date</strong> Jan 2026 – Apr 2026</li>
+                <li><strong>Stack</strong> TypeScript 6, Node.js, Express 5, Prisma ORM, Socket.io, MariaDB</li>
+                <li><strong>Architecture</strong> Modular Monolith</li>
+                <li><strong>Location</strong> Harare, Zimbabwe</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer accent-background">
+    <div class="container">
+      <div class="copyright text-center">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">B3th13</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href=""><i class="bi bi-twitter-x"></i></a>
+        <a href=""><i class="bi bi-facebook"></i></a>
+        <a href=""><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/bethel-panashe-choto/"><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="credits">
+        Designed by <a href="#">bethelchoto</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
