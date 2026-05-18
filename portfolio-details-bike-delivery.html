@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Primus Bike Delivery Platform – Bethel Panashe Choto</title>
+  <meta name="description" content="Primus Bike Delivery – 11-service microservices platform built with Java 24, Spring Boot, Apache Kafka, Redis, Docker, and Kubernetes.">
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com/" rel="preconnect">
+  <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    .pre-box {
+      background: #1e1e2e;
+      color: #cdd6f4;
+      padding: 15px;
+      border-radius: 8px;
+      font-family: 'Fira Code', monospace;
+      font-size: 0.85rem;
+      overflow-x: auto;
+      border: 1px solid #313244;
+      margin-bottom: 20px;
+    }
+    .tech-table th {
+      background-color: #313244 !important;
+      color: #ffffff !important;
+    }
+    .tech-table td, .tech-table th {
+      border: 1px solid #45475a;
+    }
+    .service-card {
+      background: #f8f9fa;
+      border-left: 4px solid #0d6efd;
+      border-radius: 0 8px 8px 0;
+      padding: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .endpoint-badge {
+      font-size: 0.75rem;
+      font-weight: bold;
+      padding: 3px 6px;
+      border-radius: 4px;
+      margin-right: 8px;
+    }
+    .badge-post { background-color: #49cc90; color: white; }
+    .badge-get { background-color: #61affe; color: white; }
+    .badge-put { background-color: #fca130; color: white; }
+    .badge-delete { background-color: #f93e3e; color: white; }
+  </style>
+</head>
+<body class="portfolio-details-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a class='logo d-flex align-items-center' href='index.html'>
+        <h1 class="sitename">Bethel Panashe Choto</h1>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href='index.html'>Home</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="page-title" data-aos="fade">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">Portfolio Details</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href='index.html'>Home</a></li>
+            <li class="current">Primus Bike Delivery</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <section id="portfolio-details" class="portfolio-details section">
+      <div class="container" data-aos="fade-up">
+
+        <!-- Portfolio Image Slides -->
+        <div class="portfolio-details-slider swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {"loop":true,"speed":600,"autoplay":{"delay":5000},"slidesPerView":"auto","navigation":{"nextEl":".swiper-button-next","prevEl":".swiper-button-prev"},"pagination":{"el":".swiper-pagination","type":"bullets","clickable":true}}
+          </script>
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide">
+              <img src="assets/img/portfolio/bike-delivery/dashboard.png" alt="Primus Bike Delivery Platform Dashboard">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/portfolio/bike-delivery/architecture.png" alt="System Architecture Diagram">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/portfolio/bike-delivery/kafka-events.png" alt="Kafka Event Flow Diagram">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/portfolio/bike-delivery/live-map.png" alt="Live Map Tracking Dashboard">
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="row justify-content-between gy-4 mt-4">
+          <div class="col-lg-8" data-aos="fade-up">
+            <div class="portfolio-description">
+              <h1 class="mb-3">🚲 BikeDelivery Platform</h1>
+              <p class="lead"><strong>A production-ready, microservices-based bike delivery system — Uber for bike deliveries.</strong></p>
+              <p>Built with <strong>Java 24</strong>, <strong>Spring Boot 3.4.13</strong>, <strong>Spring Cloud 2024.0.3</strong>, and a full suite of infrastructure including PostgreSQL, Redis, Kafka, Docker, Kubernetes, and CI/CD.</p>
+
+              <hr>
+
+              <!-- Table of Contents -->
+              <h3 class="mt-4">Table of Contents</h3>
+              <ul>
+                <li><a href="#system-architecture">System Architecture</a></li>
+                <li><a href="#technology-stack">Technology Stack</a></li>
+                <li><a href="#services-overview">Services Overview</a></li>
+                <li><a href="#event-driven-architecture">Event-Driven Architecture</a></li>
+                <li><a href="#delivery-lifecycle">Delivery Lifecycle</a></li>
+                <li><a href="#pricing-algorithm">Pricing Algorithm</a></li>
+                <li><a href="#rider-geo-matching">Rider Geo-Matching</a></li>
+                <li><a href="#live-map-tracking">Live Map Tracking</a></li>
+                <li><a href="#api-reference">API Reference</a></li>
+                <li><a href="#getting-started">Getting Started</a></li>
+                <li><a href="#cicd-pipeline">CI/CD Pipeline</a></li>
+                <li><a href="#project-structure">Project Structure</a></li>
+                <li><a href="#configuration">Configuration</a></li>
+                <li><a href="#monitoring-health-checks">Monitoring &amp; Health Checks</a></li>
+              </ul>
+
+              <hr>
+
+              <!-- System Architecture -->
+              <h2 id="system-architecture" class="mt-5 mb-3">System Architecture</h2>
+              <div class="mb-4">
+                <img src="assets/img/portfolio/bike-delivery/architecture.png" class="img-fluid rounded border mb-3" alt="System Architecture Diagram">
+              </div>
+              <pre class="pre-box">
+                                    ┌──────────────────────┐
+                                    │     API Gateway       │
+                                    │    (Port 8080)        │
+                                    │  ┌────────────────┐   │
+                                    │  │ JWT Filter      │   │
+                                    │  │ Rate Limiting   │   │
+                    Clients ───────►│  │ Circuit Breaker │   │
+                  (Mobile/Web)      │  │ CORS Config     │   │
+                                    │  │ Load Balancing  │   │
+                                    │  └────────────────┘   │
+                                    └──────────┬───────────┘
+                                               │
+                          ┌────────────────────┼────────────────────┐
+                          │                    │                    │
+                          ▼                    ▼                    ▼
+              ┌──────────────────┐ ┌──────────────────┐ ┌──────────────────┐
+              │  Discovery Server│ │   Auth Service    │ │   User Service   │
+              │   (Eureka)       │ │   (Port 8081)     │ │   (Port 8082)    │
+              │   (Port 8761)    │ │   ┌──────────┐    │ │   ┌──────────┐   │
+              │                  │ │   │ auth_db  │    │ │   │ user_db  │   │
+              │  Service Registry│ │   └──────────┘    │ │   └──────────┘   │
+              └──────────────────┘ └──────────────────┘ └──────────────────┘
+                                               
+       ┌──────────────────┐  ┌──────────────────┐  ┌──────────────────┐
+       │  Rider Service    │  │ Delivery Service  │  │ Matching Service  │
+       │   (Port 8083)     │  │   (Port 8084)     │  │   (Port 8085)     │
+       │   ┌──────────┐    │  │   ┌──────────┐    │  │                   │
+       │   │ rider_db │    │  │   │delivery_db│   │  │   Geo-Search      │
+       │   └──────────┘    │  │   └──────────┘    │  │   Expanding Radius│
+       │   ┌──────────┐    │  │                    │  │                   │
+       │   │  Redis   │    │  │   Kafka Producer   │  │   Redis + Kafka   │
+       │   │ GeoSpatial│   │  │   + Consumer       │  │                   │
+       │   └──────────┘    │  └──────────────────┘  └──────────────────┘
+       │   WebSocket +     │
+       │   Leaflet.js Map  │
+       └──────────────────┘
+
+       ┌──────────────────┐  ┌──────────────────┐  ┌──────────────────┐
+       │ Pricing Service   │  │ Payment Service   │  │Notification Svc   │
+       │   (Port 8086)     │  │   (Port 8087)     │  │   (Port 8088)     │
+       │                   │  │   ┌──────────┐    │  │                   │
+       │   Surge Pricing   │  │   │payment_db│    │  │   Email / SMS     │
+       │   Redis Cache     │  │   └──────────┘    │  │   Push Stubs      │
+       │                   │  │   Idempotent      │  │   Kafka Consumer  │
+       └──────────────────┘  │   Kafka Events     │  └──────────────────┘
+                              └──────────────────┘
+
+  ┌─────────────────────────────────────────────────────────────────────┐
+  │                        Infrastructure                               │
+  │  ┌──────────┐    ┌──────────┐    ┌──────────┐    ┌──────────────┐  │
+  │  │PostgreSQL│    │  Redis   │    │  Kafka   │    │  Zookeeper   │  │
+  │  │   16     │    │    7     │    │  7.5.0   │    │   7.5.0      │  │
+  │  │ 5 DBs   │    │ Geo+Cache│    │ 8 Topics │    │              │  │
+  │  └──────────┘    └──────────┘    └──────────┘    └──────────────┘  │
+  └─────────────────────────────────────────────────────────────────────┘
+              </pre>
+
+              <h4 class="mt-4">Communication Patterns</h4>
+              <table class="table tech-table">
+                <thead>
+                  <tr>
+                    <th>Pattern</th>
+                    <th>Usage</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Synchronous (REST/Feign)</strong></td>
+                    <td>Gateway → Services, Delivery → Pricing (price calculation), Matching → Rider (mark busy)</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Asynchronous (Kafka)</strong></td>
+                    <td>Delivery events, payment completion, notification triggers</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Service Discovery (Eureka)</strong></td>
+                    <td>All services register and discover via Eureka at port 8761</td>
+                  </tr>
+                  <tr>
+                    <td><strong>WebSocket</strong></td>
+                    <td>Real-time rider location broadcasting to map clients</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Redis Geo</strong></td>
+                    <td>O(log n) geospatial rider proximity search</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <hr>
+
+              <!-- Technology Stack -->
+              <h2 id="technology-stack" class="mt-5 mb-3">Technology Stack</h2>
+              <table class="table tech-table">
+                <thead>
+                  <tr>
+                    <th>Category</th>
+                    <th>Technology</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><strong>Language</strong></td><td>Java</td><td>24</td></tr>
+                  <tr><td><strong>Framework</strong></td><td>Spring Boot</td><td>3.4.13</td></tr>
+                  <tr><td><strong>Cloud</strong></td><td>Spring Cloud</td><td>2024.0.3</td></tr>
+                  <tr><td><strong>Service Discovery</strong></td><td>Netflix Eureka</td><td>via Spring Cloud</td></tr>
+                  <tr><td><strong>API Gateway</strong></td><td>Spring Cloud Gateway</td><td>Reactive</td></tr>
+                  <tr><td><strong>Inter-Service Comm</strong></td><td>OpenFeign</td><td>via Spring Cloud</td></tr>
+                  <tr><td><strong>Resilience</strong></td><td>Resilience4j</td><td>Circuit Breaker, Timeout</td></tr>
+                  <tr><td><strong>Database</strong></td><td>PostgreSQL</td><td>16 (Alpine)</td></tr>
+                  <tr><td><strong>Cache / Geo</strong></td><td>Redis</td><td>7 (Alpine)</td></tr>
+                  <tr><td><strong>Message Broker</strong></td><td>Apache Kafka</td><td>Confluent 7.5.0</td></tr>
+                  <tr><td><strong>Auth</strong></td><td>JWT (jjwt)</td><td>0.12.3</td></tr>
+                  <tr><td><strong>API Docs</strong></td><td>SpringDoc OpenAPI</td><td>2.3.0</td></tr>
+                  <tr><td><strong>Code Gen</strong></td><td>Lombok</td><td>1.18.42</td></tr>
+                  <tr><td><strong>Real-time Map</strong></td><td>Leaflet.js + WebSocket</td><td>—</td></tr>
+                  <tr><td><strong>Containerization</strong></td><td>Docker + Docker Compose</td><td>—</td></tr>
+                  <tr><td><strong>Orchestration</strong></td><td>Kubernetes</td><td>—</td></tr>
+                  <tr><td><strong>CI/CD</strong></td><td>GitHub Actions</td><td>5-stage pipeline</td></tr>
+                </tbody>
+              </table>
+
+              <hr>
+
+              <!-- Services Overview -->
+              <h2 id="services-overview" class="mt-5 mb-3">Services Overview</h2>
+              
+              <div class="service-card">
+                <h5>1. Discovery Server (Port 8761)</h5>
+                <p><strong>Netflix Eureka</strong> service registry. All microservices register here for dynamic service discovery. The gateway and Feign clients use Eureka to resolve service URLs via <code>lb://service-name</code>.</p>
+              </div>
+
+              <div class="service-card">
+                <h5>2. API Gateway (Port 8080)</h5>
+                <p>Central entry point for all client requests. Features:</p>
+                <ul>
+                  <li><strong>JWT Authentication Filter</strong> — validates tokens on protected routes</li>
+                  <li><strong>Rate Limiting</strong> — Redis-backed request throttling</li>
+                  <li><strong>Circuit Breakers</strong> — Resilience4j per-service circuit breakers (sliding window: 10, failure threshold: 50%, half-open calls: 3)</li>
+                  <li><strong>Timeout</strong> — 5-second timeout per request</li>
+                  <li><strong>CORS</strong> — configured for cross-origin access</li>
+                  <li><strong>Fallback</strong> — <code>/fallback</code> endpoint returns graceful error when services are down</li>
+                  <li><strong>Load Balancing</strong> — client-side via Eureka</li>
+                </ul>
+              </div>
+
+              <div class="service-card">
+                <h5>3. Auth Service (Port 8081)</h5>
+                <p>Handles user registration and authentication using <strong>stateless JWT</strong>. Tokens expire after 24 hours. The JWT secret is shared across services that need to validate tokens.</p>
+              </div>
+
+              <div class="service-card">
+                <h5>4. User Service (Port 8082)</h5>
+                <p>Manages customer profiles with full CRUD operations and paginated listing. Connected to <code>user_db</code>.</p>
+              </div>
+
+              <div class="service-card">
+                <h5>5. Rider Service (Port 8083)</h5>
+                <p>Manages rider profiles, real-time location tracking, and availability status. Features:</p>
+                <ul>
+                  <li><strong>Redis GeoSpatial</strong> — stores rider locations using <code>GEOADD</code>/<code>GEORADIUS</code> for O(log n) proximity queries</li>
+                  <li><strong>WebSocket</strong> — broadcasts rider locations to connected map clients every 3 seconds</li>
+                  <li><strong>Live Map</strong> — Leaflet.js dark-themed interactive map at <code>/map</code></li>
+                  <li><strong>Delivery Tracking</strong> — real-time delivery tracking page at <code>/map/tracking</code></li>
+                  <li><strong>Status Management</strong> — online/offline/busy/available state machine</li>
+                </ul>
+              </div>
+
+              <div class="service-card">
+                <h5>6. Delivery Service (Port 8084)</h5>
+                <p>Core business logic for the delivery lifecycle. Manages the full flow from request to completion. Publishes Kafka events at each stage. Uses Feign to call Pricing Service for price calculation.</p>
+              </div>
+
+              <div class="service-card">
+                <h5>7. Matching Service (Port 8085)</h5>
+                <p>Listens for <code>delivery-created</code> Kafka events and automatically matches deliveries with nearby available riders. Uses an <strong>expanding radius algorithm</strong> (5km → 10km → 15km) to find the best rider. Calls Rider Service via Feign to mark the matched rider as busy.</p>
+              </div>
+
+              <div class="service-card">
+                <h5>8. Pricing Service (Port 8086)</h5>
+                <p>Calculates delivery prices using a configurable formula with surge pricing support:</p>
+                <ul>
+                  <li>Base fare + per-km rate + per-minute rate + service fee</li>
+                  <li>Surge multiplier cached in Redis</li>
+                  <li>Minimum fare enforcement</li>
+                </ul>
+              </div>
+
+              <div class="service-card">
+                <h5>9. Payment Service (Port 8087)</h5>
+                <p>Processes payments with <strong>idempotency</strong> (via <code>Idempotency-Key</code> header) to prevent duplicate charges. Supports refunds. Publishes <code>payment-completed</code> events to Kafka.</p>
+              </div>
+
+              <div class="service-card">
+                <h5>10. Notification Service (Port 8088)</h5>
+                <p>Consumes Kafka events and dispatches notifications via email, SMS, and push (stub implementations ready for real provider integration).</p>
+              </div>
+
+              <hr>
+
+              <!-- Event-Driven Architecture -->
+              <h2 id="event-driven-architecture" class="mt-5 mb-3">Event-Driven Architecture</h2>
+              <p>The system uses <strong>Apache Kafka</strong> for asynchronous, event-driven communication between services.</p>
+              
+              <div class="mb-4">
+                <img src="assets/img/portfolio/bike-delivery/kafka-events.png" class="img-fluid rounded border mb-3" alt="Kafka Event Flow Diagram">
+              </div>
+
+              <h4 class="mt-4">Kafka Topics</h4>
+              <table class="table tech-table">
+                <thead>
+                  <tr>
+                    <th>Topic</th>
+                    <th>Producer</th>
+                    <th>Consumer(s)</th>
+                    <th>Purpose</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><code>delivery-created</code></td><td>Delivery Service</td><td>Matching Service</td><td>Trigger rider matching</td></tr>
+                  <tr><td><code>delivery-accepted</code></td><td>Delivery Service</td><td>Notification Service</td><td>Notify customer</td></tr>
+                  <tr><td><code>delivery-picked-up</code></td><td>Delivery Service</td><td>Notification Service</td><td>Notify customer</td></tr>
+                  <tr><td><code>delivery-completed</code></td><td>Delivery Service</td><td>Payment Service, Notification</td><td>Trigger payment + notify</td></tr>
+                  <tr><td><code>delivery-cancelled</code></td><td>Delivery Service</td><td>Notification Service</td><td>Notify parties</td></tr>
+                  <tr><td><code>rider-assigned</code></td><td>Matching Service</td><td>Delivery Service, Notification</td><td>Update delivery + notify</td></tr>
+                  <tr><td><code>payment-completed</code></td><td>Payment Service</td><td>Notification Service</td><td>Notify customer</td></tr>
+                  <tr><td><code>notification-send</code></td><td>Various</td><td>Notification Service</td><td>Generic notification trigger</td></tr>
+                </tbody>
+              </table>
+
+              <h4 class="mt-4">Event Flow Diagram</h4>
+              <pre class="pre-box">
+Customer Request
+       │
+       ▼
+ Delivery Service ──── delivery-created ────► Matching Service
+       │                                           │
+       │                                   (Redis Geo search)
+       │                                           │
+       │◄──── rider-assigned ──────────────────────┘
+       │                                           │
+       │                                    Rider marked busy
+       │                                    (Feign → Rider Svc)
+       │
+  [Rider accepts]
+       │
+       ├──── delivery-accepted ────► Notification Service
+       │
+  [Rider picks up]
+       │
+       ├──── delivery-picked-up ───► Notification Service
+       │
+  [Rider delivers]
+       │
+       ├──── delivery-completed ───► Payment Service
+       │                                    │
+       │                             payment-completed ──► Notification
+       │
+       └──── delivery-completed ───► Notification Service
+              </pre>
+
+              <hr>
+
+              <!-- Delivery Lifecycle -->
+              <h2 id="delivery-lifecycle" class="mt-5 mb-3">Delivery Lifecycle</h2>
+              <pre class="pre-box">
+    ┌──────────┐      ┌──────────┐      ┌──────────┐
+    │ REQUESTED│─────►│ ASSIGNED │─────►│ ACCEPTED │
+    └──────────┘      └──────────┘      └──────────┘
+                           │                  │
+                           │                  ▼
+                           │            ┌──────────┐
+                           │            │PICKED_UP │
+                           │            └──────────┘
+                           │                  │
+                           ▼                  ▼
+                     ┌──────────┐      ┌──────────┐
+                     │CANCELLED │      │COMPLETED │
+                     └──────────┘      └──────────┘
+              </pre>
+              <table class="table tech-table">
+                <thead>
+                  <tr>
+                    <th>State</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><strong>REQUESTED</strong></td><td>Customer created the delivery request</td></tr>
+                  <tr><td><strong>ASSIGNED</strong></td><td>Matching service found and assigned a rider</td></tr>
+                  <tr><td><strong>ACCEPTED</strong></td><td>Rider acknowledged and accepted the delivery</td></tr>
+                  <tr><td><strong>PICKED_UP</strong></td><td>Rider collected the package from pickup location</td></tr>
+                  <tr><td><strong>COMPLETED</strong></td><td>Package delivered to destination; payment triggered</td></tr>
+                  <tr><td><strong>CANCELLED</strong></td><td>Delivery cancelled (by customer or system)</td></tr>
+                </tbody>
+              </table>
+
+              <hr>
+
+              <!-- Pricing Algorithm -->
+              <h2 id="pricing-algorithm" class="mt-5 mb-3">Pricing Algorithm</h2>
+              <p>The pricing service calculates delivery cost using:</p>
+              <pre class="pre-box">
+price = baseFare + (distanceKm × perKmRate) + (estimatedMinutes × perMinuteRate) + serviceFee
+finalPrice = max(price × surgeMultiplier, minimumFare)
+              </pre>
+
+              <h4 class="mt-4">Default Configuration</h4>
+              <table class="table tech-table">
+                <thead>
+                  <tr>
+                    <th>Parameter</th>
+                    <th>Value</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>Base Fare</td><td>$2.00</td></tr>
+                  <tr><td>Per km Rate</td><td>$1.20</td></tr>
+                  <tr><td>Per Minute Rate</td><td>$0.15</td></tr>
+                  <tr><td>Service Fee</td><td>$0.50</td></tr>
+                  <tr><td>Minimum Fare</td><td>$3.00</td></tr>
+                  <tr><td>Surge Multiplier</td><td>Dynamic (cached in Redis)</td></tr>
+                </tbody>
+              </table>
+              <p><strong>Example:</strong> A 5km delivery estimated at 15 minutes with no surge:</p>
+              <pre class="pre-box">$2.00 + (5 × $1.20) + (15 × $0.15) + $0.50 = $2.00 + $6.00 + $2.25 + $0.50 = $10.75</pre>
+
+              <hr>
+
+              <!-- Rider Geo-Matching -->
+              <h2 id="rider-geo-matching" class="mt-5 mb-3">Rider Geo-Matching</h2>
+              <p>The <strong>Matching Service</strong> uses <strong>Redis GeoSpatial</strong> commands for O(log n) rider proximity search:</p>
+              <ol>
+                <li><strong>Location Storage</strong> — riders update their GPS coordinates, stored via <code>GEOADD riders:locations longitude latitude riderId</code></li>
+                <li><strong>Proximity Query</strong> — when a delivery is created, <code>GEORADIUS</code> finds all available riders within range</li>
+                <li><strong>Expanding Radius</strong> — if no rider is found within 5km, the search expands to 10km, then 15km</li>
+                <li><strong>Best Match</strong> — closest available rider is selected and marked as busy</li>
+                <li><strong>Real-time Updates</strong> — the Rider Service tracks online/offline/busy/available status in a Redis Set</li>
+              </ol>
+
+              <hr>
+
+              <!-- Live Map Tracking -->
+              <h2 id="live-map-tracking" class="mt-5 mb-3">Live Map Tracking</h2>
+              <p>The Rider Service includes a <strong>real-time map visualization</strong> powered by <strong>Leaflet.js</strong> and <strong>WebSocket</strong>.</p>
+              
+              <div class="mb-4">
+                <img src="assets/img/portfolio/bike-delivery/live-map.png" class="img-fluid rounded border mb-3" alt="Rider Live Map tracking screenshot">
+              </div>
+
+              <h4 class="mt-4">Endpoints</h4>
+              <table class="table tech-table">
+                <thead>
+                  <tr>
+                    <th>URL</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><code>http://localhost:8083/map</code></td><td>Interactive map showing all rider locations in real-time</td></tr>
+                  <tr><td><code>http://localhost:8083/map/tracking</code></td><td>Delivery tracking view for individual deliveries</td></tr>
+                </tbody>
+              </table>
+
+              <h4 class="mt-4">How It Works</h4>
+              <ol>
+                <li>Browser connects to WebSocket at <code>ws://localhost:8083/ws/rider-location</code></li>
+                <li>Server broadcasts all active rider positions every <strong>3 seconds</strong></li>
+                <li>Map renders rider markers on a <strong>dark-themed OpenStreetMap</strong> layer</li>
+                <li>Markers update in real-time as riders move</li>
+              </ol>
+
+              <hr>
+
+              <!-- API Reference -->
+              <h2 id="api-reference" class="mt-5 mb-3">API Reference</h2>
+              <p>All endpoints are accessed through the <strong>API Gateway</strong> at <code>http://localhost:8080</code>.</p>
+
+              <h4 class="mt-4">Authentication — <code>/api/auth</code></h4>
+              <table class="table tech-table">
+                <thead>
+                  <tr>
+                    <th>Method</th>
+                    <th>Endpoint</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><span class="endpoint-badge badge-post">POST</span></td><td><code>/api/auth/register</code></td><td>Register new user</td></tr>
+                  <tr><td><span class="endpoint-badge badge-post">POST</span></td><td><code>/api/auth/login</code></td><td>Login → JWT token</td></tr>
+                  <tr><td><span class="endpoint-badge badge-get">GET</span></td><td><code>/api/auth/validate?token=</code></td><td>Validate JWT token</td></tr>
+                </tbody>
+              </table>
+
+              <h4 class="mt-4">Customers — <code>/api/customers</code></h4>
+              <table class="table tech-table">
+                <thead>
+                  <tr>
+                    <th>Method</th>
+                    <th>Endpoint</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><span class="endpoint-badge badge-post">POST</span></td><td><code>/api/customers</code></td><td>Create customer profile</td></tr>
+                  <tr><td><span class="endpoint-badge badge-get">GET</span></td><td><code>/api/customers/{id}</code></td><td>Get customer by ID</td></tr>
+                  <tr><td><span class="endpoint-badge badge-get">GET</span></td><td><code>/api/customers/email/{email}</code></td><td>Get customer by email</td></tr>
+                  <tr><td><span class="endpoint-badge badge-get">GET</span></td><td><code>/api/customers</code></td><td>List all (pageable: <code>?page=0&amp;size=20</code>)</td></tr>
+                  <tr><td><span class="endpoint-badge badge-put">PUT</span></td><td><code>/api/customers/{id}</code></td><td>Update customer</td></tr>
+                  <tr><td><span class="endpoint-badge badge-delete">DELETE</span></td><td><code>/api/customers/{id}</code></td><td>Delete customer</td></tr>
+                </tbody>
+              </table>
+
+              <h4 class="mt-4">Riders — <code>/api/riders</code></h4>
+              <table class="table tech-table">
+                <thead>
+                  <tr>
+                    <th>Method</th>
+                    <th>Endpoint</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><span class="endpoint-badge badge-post">POST</span></td><td><code>/api/riders</code></td><td>Register new rider</td></tr>
+                  <tr><td><span class="endpoint-badge badge-get">GET</span></td><td><code>/api/riders/{id}</code></td><td>Get rider by ID</td></tr>
+                  <tr><td><span class="endpoint-badge badge-get">GET</span></td><td><code>/api/riders</code></td><td>List all riders (pageable)</td></tr>
+                  <tr><td><span class="endpoint-badge badge-post">POST</span></td><td><code>/api/riders/location</code></td><td>Update rider GPS location</td></tr>
+                  <tr><td><span class="endpoint-badge badge-post">POST</span></td><td><code>/api/riders/{id}/online</code></td><td>Set rider online</td></tr>
+                  <tr><td><span class="endpoint-badge badge-post">POST</span></td><td><code>/api/riders/{id}/offline</code></td><td>Set rider offline</td></tr>
+                  <tr><td><span class="endpoint-badge badge-post">POST</span></td><td><code>/api/riders/{id}/busy</code></td><td>Mark rider as busy</td></tr>
+                  <tr><td><span class="endpoint-badge badge-post">POST</span></td><td><code>/api/riders/{id}/available</code></td><td>Mark rider as available</td></tr>
+                  <tr><td><span class="endpoint-badge badge-get">GET</span></td><td><code>/api/riders/nearby</code></td><td>Find nearby available riders</td></tr>
+                </tbody>
+              </table>
+
+              <h4 class="mt-4">Deliveries — <code>/api/deliveries</code></h4>
+              <table class="table tech-table">
+                <thead>
+                  <tr>
+                    <th>Method</th>
+                    <th>Endpoint</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><span class="endpoint-badge badge-post">POST</span></td><td><code>/api/deliveries/request</code></td><td>Create delivery request</td></tr>
+                  <tr><td><span class="endpoint-badge badge-get">GET</span></td><td><code>/api/deliveries/{id}</code></td><td>Get delivery by ID</td></tr>
+                  <tr><td><span class="endpoint-badge badge-get">GET</span></td><td><code>/api/deliveries/customer/{customerId}</code></td><td>Customer's deliveries</td></tr>
+                  <tr><td><span class="endpoint-badge badge-get">GET</span></td><td><code>/api/deliveries/rider/{riderId}</code></td><td>Rider's deliveries</td></tr>
+                  <tr><td><span class="endpoint-badge badge-post">POST</span></td><td><code>/api/deliveries/{id}/accept</code></td><td>Rider accepts delivery</td></tr>
+                  <tr><td><span class="endpoint-badge badge-post">POST</span></td><td><code>/api/deliveries/{id}/pickup</code></td><td>Rider picks up package</td></tr>
+                  <tr><td><span class="endpoint-badge badge-post">POST</span></td><td><code>/api/deliveries/{id}/complete</code></td><td>Rider completes delivery</td></tr>
+                  <tr><td><span class="endpoint-badge badge-post">POST</span></td><td><code>/api/deliveries/{id}/cancel</code></td><td>Cancel delivery</td></tr>
+                </tbody>
+              </table>
+
+              <hr>
+
+              <!-- Getting Started -->
+              <h2 id="getting-started" class="mt-5 mb-3">Getting Started</h2>
+              
+              <h4 class="mt-4">Prerequisites</h4>
+              <ul>
+                <li><strong>Java 24</strong> (JDK)</li>
+                <li><strong>Maven 3.9+</strong></li>
+                <li><strong>Docker &amp; Docker Compose</strong></li>
+                <li><strong>Git</strong></li>
+              </ul>
+
+              <h4 class="mt-4">Build the Project</h4>
+              <pre class="pre-box">
+# Clone the repository
+git clone &lt;repository-url&gt;
+cd ride_system
+
+# Build all 11 modules
+mvn clean package -DskipTests
+              </pre>
+
+              <h4 class="mt-4">Running with Docker Compose</h4>
+              <pre class="pre-box">
+# Start everything (infrastructure + all services)
+docker-compose up -d
+
+# Watch logs
+docker-compose logs -f
+
+# Stop everything
+docker-compose down
+              </pre>
+
+              <h4 class="mt-4">Running Individual Services</h4>
+              <pre class="pre-box">
+# 1. Start only infrastructure
+docker-compose up -d bike-postgres bike-redis bike-zookeeper bike-kafka
+
+# 2. Wait for infrastructure to be healthy
+docker-compose ps
+
+# 3. Start Discovery Server first (required by all services)
+cd discovery-server
+mvn spring-boot:run
+
+# 4. Start any service you need
+cd ../auth-service
+mvn spring-boot:run
+              </pre>
+
+              <h4 class="mt-4">Running with Kubernetes</h4>
+              <pre class="pre-box">
+# Deploy infrastructure & services
+kubectl apply -f k8s/namespace.yml
+kubectl apply -f k8s/infrastructure/
+kubectl apply -f k8s/services/
+kubectl apply -f k8s/ingress.yml
+              </pre>
+
+              <hr>
+
+              <!-- CI/CD Pipeline -->
+              <h2 id="cicd-pipeline" class="mt-5 mb-3">CI/CD Pipeline</h2>
+              <p>The project includes a <strong>5-stage GitHub Actions pipeline</strong> (<code>.github/workflows/ci-cd.yml</code>):</p>
+              <pre class="pre-box">
+┌─────────────────┐     ┌──────────────┐     ┌──────────────┐
+│  Build &amp; Test    │────►│ Code Quality │────►│ Docker Build  │
+│  (Maven + Tests) │     │ (SpotBugs)   │     │ (Matrix x10) │
+└─────────────────┘     └──────────────┘     └──────┬───────┘
+                                                      │
+                                              ┌───────▼───────┐
+                                              │Deploy Staging  │
+                                              │ (Kubernetes)   │
+                                              └───────┬───────┘
+                                                      │
+                                              ┌───────▼───────┐
+                                              │Deploy Production│
+                                              │ (Kubernetes)    │
+                                              └────────────────┘
+              </pre>
+
+              <hr>
+
+              <!-- Project Structure -->
+              <h2 id="project-structure" class="mt-5 mb-3">Project Structure</h2>
+              <pre class="pre-box">
+ride_system/
+├── pom.xml                          # Parent POM (11 modules)
+├── docker-compose.yml               # Full stack Docker Compose
+├── common-lib/                      # Shared library
+├── discovery-server/                # Eureka Server (8761)
+├── api-gateway/                     # Spring Cloud Gateway (8080)
+├── auth-service/                    # Authentication (8081)
+├── user-service/                    # Customer Management (8082)
+├── rider-service/                   # Rider + Live Map (8083)
+├── delivery-service/                # Delivery Management (8084)
+├── matching-service/                # Rider-Delivery Matching (8085)
+├── pricing-service/                 # Dynamic Pricing (8086)
+├── payment-service/                 # Payment Processing (8087)
+├── notification-service/            # Notifications (8088)
+└── k8s/                             # Kubernetes manifests
+              </pre>
+
+              <hr>
+
+              <!-- Configuration -->
+              <h2 id="configuration" class="mt-5 mb-3">Configuration</h2>
+              <h4 class="mt-4">Databases</h4>
+              <p>All databases run on a single PostgreSQL 16 instance. Tables are auto-created by Spring JPA (<code>ddl-auto: update</code>).</p>
+              <ul>
+                <li><code>auth_db</code> (Auth Service)</li>
+                <li><code>user_db</code> (User Service)</li>
+                <li><code>rider_db</code> (Rider Service)</li>
+                <li><code>delivery_db</code> (Delivery Service)</li>
+                <li><code>payment_db</code> (Payment Service)</li>
+              </ul>
+
+              <hr>
+
+              <!-- Monitoring & Health Checks -->
+              <h2 id="monitoring-health-checks" class="mt-5 mb-3">Monitoring &amp; Health Checks</h2>
+              <p>All services expose <strong>Spring Boot Actuator</strong> endpoints:</p>
+              <ul>
+                <li><code>/actuator/health</code> — Service health status</li>
+                <li><code>/actuator/info</code> — Service info</li>
+                <li><code>/actuator/metrics</code> — Micrometer metrics</li>
+              </ul>
+
+              <hr>
+
+              <!-- Quick Test Guide -->
+              <h2 id="quick-test-guide" class="mt-5 mb-3">Quick Test Guide</h2>
+              <p>After starting the platform, test the full delivery flow:</p>
+              <pre class="pre-box">
+# 1. Register a user
+curl -X POST http://localhost:8080/api/auth/register \
+  -H "Content-Type: application/json" \
+  -d '{"email":"john@example.com","password":"password123","fullName":"John Doe","phone":"+1234567890"}'
+
+# 2. Login to get JWT token
+TOKEN=$(curl -s -X POST http://localhost:8080/api/auth/login \
+  -H "Content-Type: application/json" \
+  -d '{"email":"john@example.com","password":"password123"}' | jq -r '.data.token')
+
+# 3. Create a customer profile
+curl -X POST http://localhost:8080/api/customers \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $TOKEN" \
+  -d '{"email":"john@example.com","firstName":"John","lastName":"Doe","phone":"+1234567890"}'
+
+# 4. Register a rider
+curl -X POST http://localhost:8080/api/riders \
+  -H "Content-Type: application/json" \
+  -d '{"email":"rider@example.com","firstName":"Jane","lastName":"Smith","phone":"+0987654321","vehicleType":"BICYCLE"}'
+
+# 5. Set rider online and update location
+curl -X POST http://localhost:8080/api/riders/1/online
+curl -X POST http://localhost:8080/api/riders/location \
+  -H "Content-Type: application/json" \
+  -d '{"riderId":1,"latitude":-26.2041,"longitude":28.0473}'
+              </pre>
+
+              <hr>
+
+              <p class="mt-4"><strong>Built with ❤️ using Spring Boot Microservices</strong></p>
+
+            </div>
+          </div>
+
+          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong> Logistics / Delivery Platform</li>
+                <li><strong>Client</strong> Primus Technology</li>
+                <li><strong>Role</strong> Backend Java Software Engineer</li>
+                <li><strong>Project date</strong> Dec 2025 – Present</li>
+                <li><strong>Stack</strong> Java 24, Spring Boot 3.4.13, Kafka, Redis, Docker, Kubernetes</li>
+                <li><strong>Architecture</strong> 11-Service Microservices</li>
+                <li><strong>Location</strong> Harare, Zimbabwe</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer accent-background">
+    <div class="container">
+      <div class="copyright text-center">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">B3th13</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href="#"><i class="bi bi-twitter-x"></i></a>
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/bethel-panashe-choto/"><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
