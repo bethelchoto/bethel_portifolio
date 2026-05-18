@@ -1627,3 +1627,164 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+/*--------------------------------------------------------------
+# Interactive Tech Stack Hub
+--------------------------------------------------------------*/
+.btn-skills-toggle {
+  background: linear-gradient(135deg, var(--accent-color) 0%, #0056b3 100%);
+  color: #ffffff;
+  border: none;
+  padding: 14px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 4px 15px rgba(0, 120, 255, 0.3);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-skills-toggle:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 120, 255, 0.5);
+  background: linear-gradient(135deg, #0056b3 0%, var(--accent-color) 100%);
+}
+
+.btn-skills-toggle:active {
+  transform: translateY(-1px);
+}
+
+.btn-skills-toggle .toggle-icon {
+  transition: transform 0.4s ease;
+}
+
+.btn-skills-toggle.active .toggle-icon {
+  transform: rotate(180deg);
+}
+
+#detailed-skills-hub {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+#detailed-skills-hub.show {
+  max-height: 2000px; /* high enough to cover all contents */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skills-hub-container {
+  padding-top: 40px;
+  margin-top: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+.skill-category-card {
+  background: var(--surface-color);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.skill-category-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 120, 255, 0.15);
+  border-color: rgba(0, 120, 255, 0.2);
+}
+
+.skill-category-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--accent-color);
+  border-radius: 4px 0 0 4px;
+}
+
+.skill-category-card h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.skill-category-card h4 i {
+  color: var(--accent-color);
+  font-size: 20px;
+}
+
+.skills-badges-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-badge {
+  background: color-mix(in srgb, var(--accent-color), transparent 94%);
+  color: var(--accent-color);
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 85%);
+  padding: 6px 14px;
+  font-size: 13.5px;
+  font-weight: 550;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.skill-badge:hover {
+  background: var(--accent-color);
+  color: #ffffff;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 120, 255, 0.2);
+}
+
+.portfolio-link-banner {
+  background: linear-gradient(135deg, rgba(0, 120, 255, 0.05) 0%, rgba(0, 86, 179, 0.05) 100%);
+  border: 1px dashed rgba(0, 120, 255, 0.3);
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.portfolio-link-banner p {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 550;
+}
+
+.portfolio-link-banner a {
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
